@@ -1,7 +1,89 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Open+Sans&family=Poppins:wght@800&display=swap');
+
+// COLOR PALETTE
+
+$primary-dark: #060606;
+$primary-light: #fff;
+$grey-light: #BFBFBF;
+$grey-dark: #2D2C2C;
+
+// ELEMENT VARIABLES
+.light{
+    --bg: #{$primary-light};
+    --text-grey: #{$grey-dark};
+    --text-dark: #{$primary-dark};
+}
+
+.dark{
+    --bg: #{$primary-dark};
+    --text-grey: #{$grey-light};
+    --text-dark: #{$primary-light};
+}
+
+// BASIC CSS
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 html{
     font-size: 16px;
+}  
+
+body{
+    font-family: 'Poppins', 'Open Sans', 'Inconsolata';
+    background: var(--bg);
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+a{  
+    font-family: 'Inconsolata';
+    color: currentColor;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Poppins';
+    color: var(--text-dark);
+}
+
+h1{
+    font-size: 4rem;
+    width: fit-content;
+    background: linear-gradient(89.71deg, #FFCD5A 2.24%, #FF4D4D 39.97%, #9360FF 91.68%);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h2{
+    font-size: 2.5rem;
+    width: fit-content;
+    background: linear-gradient(89.71deg, #FFCD5A 2.24%, #FF4D4D 39.97%, #9360FF 91.68%);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p{
+    font-family: 'Open Sans';
+    font-size: 1.2rem;
+    color: var(--text-grey);
+}
+
+#landing{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
