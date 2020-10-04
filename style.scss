@@ -87,3 +87,45 @@ p{
         justify-content: center;
     }
 }
+
+#contact{
+     display: flex;
+     justify-content: center;
+     width: 100%;
+    .container-main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+         div{
+            padding: 50px;
+         }
+         
+         .img-container{
+            flex: 1;
+            left: 40px;
+            justify-content: flex-end;
+            width: 50%;
+           }
+    
+        .form-container{
+               flex: 1;    
+               padding: 40px;
+               align-self: center;
+               justify-content: center;    
+    
+           }  
+           .form{
+             border :none;
+             
+           }
+           
+             a{
+               text-decoration :0;
+               border: 2px;
+
+               border-color: #fff;
+             }
+    }
+}
