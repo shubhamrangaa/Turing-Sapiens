@@ -12,16 +12,40 @@ togglebtn.onclick = () => {
 var mySwiper = new Swiper('.swiper-container', {
       
     slidesPerView: 4,
-    spaceBetween: 80,
+    spaceBetween: 50,
     loop: true,
     navigation: {
-  nextEl: '.swiper-button-next',
-  prevEl: '.swiper-button-prev',
+  nextEl:'.swiper-button-next',
+  prevEl:'.swiper-button-prev',
 },
-    /*pagination: {
-      //el: '.swiper-pagination',
+ autoplay:true,
+   
+    pagination: {
+      el: '.swiper-pagination',
       clickable: true,
-    },*/
+    },
+    breakpoints: { 
+    350:{
+      slidesPerView: 1,
+      spaceBetween: 50,
+    },
+    690: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+      
+    },
+    1043: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      
+     
+    },
+    1317: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+      
+    },
+  }
 })
 /*loop: true,
 

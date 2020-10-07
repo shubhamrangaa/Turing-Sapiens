@@ -175,7 +175,7 @@ p {
       -ms-flex: 1;
           flex: 1;
   left: 40px;
-  padding-left: 550px;
+  padding-left: 350px;
   width: 50%;
 }
 
@@ -213,6 +213,11 @@ p {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1150px;
+  margin: 0 auto;
 }
 
 .info-main h3 {
@@ -220,19 +225,18 @@ p {
 }
 
 .info-main .container-vis {
+  padding-right: 160px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   line-height: 50px;
-  padding-left: 220px;
 }
 
 .info-main .container-info {
-  padding-top: 45px;
+  padding-top: 40px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding-right: 280px;
 }
 
 .info-main .container-info .small-font {
@@ -244,7 +248,8 @@ p {
   background-color: var(--bg);
   color: var(--text-dark);
   height: 500px;
-  width: 85%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .swiper-container .swiper-slide {
@@ -261,10 +266,57 @@ p {
   font-family: sans-serif;
 }
 
+.swiper-container .swiper-slide .overlay {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(7%, black), to(transparent));
+  background-image: linear-gradient(to top, black 7%, transparent);
+  position: absolute;
+}
+
+.swiper-container .swiper-slide figure {
+  position: relative;
+}
+
+.swiper-container .swiper-slide h3 {
+  color: var(--text-dark);
+  padding-top: 120px;
+  padding-left: 80px;
+  font-size: 1.5rem;
+}
+
+.swiper-container .swiper-slide #project {
+  color: var(--text-dark);
+  padding-top: 120px;
+  padding-left: 100px;
+  font-size: 1.5rem;
+}
+
 .swiper-container .swiper-slide img {
   border-radius: 10px;
   width: 300px;
   height: 300px;
+}
+
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+  content: 'next';
+  visibility: hidden;
+}
+
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+  content: 'prev';
+  visibility: hidden;
+}
+
+.swiper-container-horizontal > .swiper-scrollbar {
+  visibility: hidden;
+  position: absolute;
+  left: 1%;
+  bottom: 3px;
+  z-index: 50;
+  height: 5px;
+  width: 98%;
 }
 
 #meet-the-team {

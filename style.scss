@@ -149,7 +149,7 @@ p{
         .img-container{
            flex: 1;
            left: 40px;
-           padding-left: 550px;
+           padding-left: 350px;
            width: 50%;
           }
 
@@ -178,20 +178,23 @@ p{
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
-     
+     justify-content: center;
+     max-width: 1150px;
+     //border: 1px solid white;
+     margin: 0 auto;
         h3{
             font-size: 2.2rem;
         }
         .container-vis{
+         padding-right: 160px;
          flex: 1;   
          line-height: 50px; 
-        padding-left: 220px;
+        
         }
         .container-info{
-        padding-top: 45px ;
+        padding-top: 40px;
         flex: 1;
-        padding-right: 280px;
-          .small-font{
+        .small-font{
               font-size: 1rem;
           }
         }
@@ -204,10 +207,35 @@ p{
     background-color: var(--bg);
     color: var(--text-dark);
     height: 500px;
-    width: 85%;
+    width: 90%;
+    margin: 0 auto;
     
     
     .swiper-slide{
+        .overlay{
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            background-image: linear-gradient(to top, black 7%,transparent);
+            position: absolute;
+        }
+        figure{
+            position: relative;
+        }
+        h3{
+            color: var(--text-dark);
+            
+            padding-top: 120px;
+            padding-left:80px ;
+            font-size: 1.5rem;
+        }
+        #project{
+            color: var(--text-dark);
+            
+            padding-top: 120px;
+            padding-left:100px ;
+            font-size: 1.5rem;
+        }
         img{
             border-radius: 10px;
             width: 300px;
@@ -221,7 +249,25 @@ p{
       font-family: sans-serif;
     }
 }
-
+//swiper buttons visibility
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+    content: 'next';
+    visibility: hidden;
+}
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+    content: 'prev';
+    visibility: hidden;
+}
+.swiper-container-horizontal > .swiper-scrollbar {
+    visibility: hidden;
+    position: absolute;
+    left: 1%;
+    bottom: 3px;
+    z-index: 50;
+    height: 5px;
+    width: 98%;
+}
+//swiper buttons visibility end
 
 // MEET THE TEAM BEGINS
 #meet-the-team{
