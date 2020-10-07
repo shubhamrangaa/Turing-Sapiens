@@ -61,30 +61,36 @@ h1{
     padding-bottom: 2rem;
 }
 h2{
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     width: fit-content;
     background: linear-gradient(89.71deg, #FFCD5A 2.24%, #FF4D4D 39.97%, #9360FF 91.68%);
     text-shadow: none;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media only screen and (max-width: 500px){
+        font-size: 1.5rem;
+    }
 }
 
 h5{
     font-family: 'Inconsolata';
     color: var(--text-dark);
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 400;
 
 @media only screen and (max-width: 500px){
-    font-size: 1.2rem;
+    font-size: 1.125rem;
 }
 }
 
 p{
     font-family: 'Open Sans';
-    font-size: 1.2rem;
+    font-size: 1.125rem;
     color: var(--text-grey);
+    @media only screen and (max-width: 500px){
+        font-size: 1rem;
+    }
 }
 
 // BUTTON STYLES
@@ -110,6 +116,26 @@ p{
     color: $primary-dark;
 }
 
+// NAVBAR BEGINS
+
+#navbar-menu{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+
+    figure{
+        img{
+            object-fit: cover;
+            height: 125px;
+            width: 125px;
+        }
+    }
+}
+// NAVBAR ENDS
 
 // LANDING BEGINS
 #landing{
@@ -276,7 +302,7 @@ p{
     align-items: center;
     flex-direction: column;
     text-align: center;
-    
+    margin: 5rem 0rem;
     header{
         text-align: center;
         h2{
@@ -384,3 +410,34 @@ p{
 
 
 // MEET THE TEAM ENDS
+
+// PARTNERS PAGE BEGINS
+#partners{
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    margin: 10rem auto;
+    max-width: 1400px;
+
+    @media only screen and (max-width:900px) {
+        grid-template-columns:  1fr;
+    }
+    .partner-images{
+        @media only screen and (max-width:900px) {
+            display: none;
+        }
+        img{
+            width: 350px;
+            height: 175px;
+        }
+    }
+
+    .partner-info{
+        
+        padding: 2rem;
+        
+        .join-us{
+            margin-top: 2rem;
+        }
+    }
+}
+// PARTNERS PAGE ENDS
