@@ -1,5 +1,5 @@
 // FONTS
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Open+Sans&family=Poppins:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&family=Open+Sans&family=Poppins:wght@800&display=swap');
 
 // COLOR PALETTE
 
@@ -58,6 +58,7 @@ h1{
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-bottom: 2rem;
 }
 h2{
     font-size: 2.5rem;
@@ -69,12 +70,48 @@ h2{
     -webkit-text-fill-color: transparent;
 }
 
+h5{
+    font-family: 'Inconsolata';
+    color: var(--text-dark);
+    font-size: 1.6rem;
+    font-weight: 400;
+
+@media only screen and (max-width: 500px){
+    font-size: 1.2rem;
+}
+}
+
 p{
     font-family: 'Open Sans';
     font-size: 1.2rem;
     color: var(--text-grey);
 }
 
+// BUTTON STYLES
+.join-us{
+    font-family: 'Inconsolata';
+    font-size: 1.5rem;
+    font-weight: 400;
+    background: $primary-dark;
+    border: 1.5px solid $primary-light;
+    border-radius: .35rem;
+    padding: .5rem 2rem;
+    color: $primary-light;
+}
+
+.fill{
+    font-family: 'Inconsolata';
+    font-size: 1.5rem;
+    font-weight: 400;
+    background: $primary-light;
+    border: 1.5px solid $primary-dark;
+    border-radius: .35rem;
+    padding: .5rem 2rem;
+    color: $primary-dark;
+}
+
+
+// LANDING BEGINS
 #landing{
     height: 100vh;
     display: flex;
@@ -85,9 +122,16 @@ p{
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        button{
+            width: fit-content;
+            margin: 0 auto;
+        }
     }
 }
+// LANDING ENDS
 
+// CONTACT BEGINS
 #contact{
     display: flex;
     justify-content: center;
@@ -178,5 +222,119 @@ p{
     }
 }
 
-  
-      
+
+// MEET THE TEAM BEGINS
+#meet-the-team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
+    header{
+        text-align: center;
+        h2{
+            margin: 0 auto;
+        }
+       
+    }
+
+    .team-carousel{
+        width: 80%;
+        padding: 1rem;
+        margin: 2rem;
+        display: flex;
+        overflow-x: scroll;
+
+        @media only screen  and (max-width:700px){
+            width: 90%;
+        }
+       
+        &::-webkit-scrollbar{
+            width: .75rem;
+            height: .75rem;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            background-color: #1a1a1a;
+            border-radius: .5rem;
+            box-shadow: inset 2px 2px 2px #2d2c2c5d, inset 2px 2px 2px #5a5a5a5d;
+        }
+
+        &::-webkit-scrollbar-track{
+            background: linear-gradient(90deg, #060606,);
+        }
+        .team-card{
+            height: 425px;
+            width: 300px;
+            position: relative;
+            border-radius: 1rem;
+            transition: 200ms ease-in-out;
+           
+            box-shadow: -1rem 0 3rem #000000 ;
+
+            &:hover{
+                transform: translateY(-1.5rem);
+                // .team-overlay{
+                //     background: black;
+                    
+                // }
+            }
+            &:hover~.team-card{
+                transform: translateX(100px);
+            }
+
+            &:not(:first-child){
+                margin-left: -100px;
+            }
+                img{
+                    height: 425px;
+                    width: 300px;
+                    border-radius: 1rem;
+                }
+                
+                .team-overlay{
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient( 360deg, $primary-dark, rgba(255, 255, 255, 0));
+                    position: absolute;
+                    top: 0px;
+                    border-radius: 1rem;
+                    transition: 300ms ease-in;
+                    transform-origin: bottom;
+
+                    header{
+                        position: absolute;
+                        bottom: 0.5rem;
+                        left: 50%;
+                        transform: translate(-50%);
+                        h3{
+                            color: $primary-light;
+                           
+                        }
+                        small{
+                            color: $grey-light;
+                            font-family: "Open sans";
+                        }
+                    }
+                }
+        }
+    }
+    .team-links{
+        display: flex;
+        width: 40%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 1rem;
+
+        button{
+            margin-bottom: 1rem;
+        }
+        @media only screen and (max-width: 1100px ) {
+            width: 80%;
+        }
+    }
+}
+
+
+// MEET THE TEAM ENDS
