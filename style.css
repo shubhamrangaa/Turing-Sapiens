@@ -132,9 +132,7 @@ p {
       -ms-flex: 1;
           flex: 1;
   left: 40px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  padding-left: 550px;
   width: 50%;
 }
 
@@ -142,7 +140,7 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 40px;
+  padding-right: 500px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -160,5 +158,69 @@ p {
           text-decoration: 0;
   border: 2px;
   border-color: #fff;
+}
+
+.info-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.info-main h3 {
+  font-size: 2.2rem;
+}
+
+.info-main .container-vis {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 50px;
+  padding-left: 220px;
+}
+
+.info-main .container-info {
+  padding-top: 45px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 280px;
+}
+
+.info-main .container-info .small-font {
+  font-size: 1rem;
+}
+
+/*swiper implementation*/
+.swiper-container {
+  background-color: var(--bg);
+  color: var(--text-dark);
+  height: 500px;
+  width: 80%;
+}
+
+.swiper-container .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.swiper-container .swiper-slide img {
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
 }
 /*# sourceMappingURL=style.css.map */

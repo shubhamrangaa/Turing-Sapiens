@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turing sapiens | Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+   
 
 </head>
-< class="dark">
+<body class="dark">
+
     <!-- LANDING PAGE BEGINS -->
     <section id="landing">
         <div class="navbar">
@@ -19,13 +23,78 @@
         </div>
     </section>
     <!-- LANDING PAGE ENDS -->
+    <!--About us-->
     
+        <div class="info-main">
+            <div class="container-vis">
+                <p>Who we are</p>
+                 <h3>
+                     We are a student community set to develop the tech culture blahh
+                 </h3>
+            </div>
+            <div class="container-info">
+                <p class="small-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem nemo maiores, vitae eaque labore ab dolorum autem alias distinctio debitis corrupti. 
+                    Dolor nulla, dignissimos ab mollitia quisquam accusamus necessitatibus corrupti.
+                </p>
+                <br>
+                <p class="small-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem nemo maiores, vitae eaque labore ab dolorum autem alias distinctio debitis corrupti. 
+                    Dolor nulla, dignissimos ab mollitia quisquam accusamus necessitatibus corrupti.
+                </p>
+                
+            </div>
+        </div>
+        <br>
+
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    
+                    <img src="img/img_1.jpg">
+                </div>
+                <div class="swiper-slide" >
+                    
+                    <img src="img/img_2.jpg">
+                </div>
+                <div class="swiper-slide" >
+                    
+                    <img src="img/img_3.jpg">
+                </div>
+                <div class="swiper-slide" >
+                    
+                    <img src="img/img_4.jpg">
+                    
+                </div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+        
+          <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+          <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+          <script src="app.js"></script>
+
+   
+      
+    <br>
+
     <h2>whats up?</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laborum, ipsa sequi vitae rem fugiat! Cumque nostrum labore sunt in aspernatur voluptas, fugiat reprehenderit sapiente cum, praesentium maxime, repellat consequuntur.</p>
     <script src="app.js"></script>
   <!--contact form-->
 
- <section id="contact">
+  <!--contact form-->
+
+  <section id="contact">
     <div class="container-main">
         <div class="img-container">
         <svg class = "img" width="290" height="290" viewBox="0 0 290 290" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +108,7 @@
                 </clipPath>
                 </defs>
                 </svg>
-                
+
         </div>
         <div class = "form-container">
             <h2>Let's Talk</h2>
@@ -48,18 +117,17 @@
                 <input type="text" name = "creds" value="Name"> 
 
                 <input type="email" name = "creds" value="Email"> 
-                
+
                 <br>
                 <input type="text" name = "creds" value="Subject"> 
             </form>
             <br>
             <a href="#">Send Message</a>
         </div>
-        
-    </div>
- 
- </section>
 
+    </div>
+
+ </section>
     
 
 
