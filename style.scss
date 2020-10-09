@@ -116,22 +116,52 @@ p{
     color: $primary-dark;
 }
 
+#dark-toggle{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    filter: grayscale(100);
+}
+
+// PRELOADER BEGINS
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.hidden{
+    display: none;
+}
+// PRELOADER ENDS
+
 // NAVBAR BEGINS
 
 #navbar-menu{
     width: 100%;
-    height: 100px;
+    height: 60px;
+   
     position: fixed;
-    background-color: var(--bg);
+    background-color:var(--bg);
     display: flex;
     justify-content: space-between;
     z-index: 1000;
 
     figure{
         img{
+            padding: .5rem;
             object-fit: cover;
-            height: 125px;
-            width: 125px;
+            height: 50px;
+            width: 50px;
         }
     }
 }
