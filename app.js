@@ -1,12 +1,4 @@
-// PRELOADER BEGINS
-window.addEventListener("load", function(){
-  console.log('helloji')
-  const loader = document.getElementsByClassName("loader");
-  console.log(loader)
-  loader.classList.add("hidden");
-});
 
-// PRELOADER ENDS
 
 // DARK MODE TOGGLE
 
@@ -31,11 +23,7 @@ var mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 4,
     spaceBetween: 50,
     loop: true,
-    navigation: {
-  nextEl:'.swiper-button-next',
-  prevEl:'.swiper-button-prev',
-},
- autoplay:true,
+    autoplay:true,
    
     pagination: {
       el: '.swiper-pagination',
@@ -48,18 +36,18 @@ var mySwiper = new Swiper('.swiper-container', {
     },
     690: {
       slidesPerView: 2,
-      spaceBetween: 50,
+      spaceBetween: 30,
       
     },
     1043: {
       slidesPerView: 3,
-      spaceBetween: 50,
+      spaceBetween: 30,
       
      
     },
-    1317: {
+    1117: {
       slidesPerView: 4,
-      spaceBetween: 50,
+      spaceBetween: 30,
       
     },
   }
@@ -84,3 +72,10 @@ scrollbar: {
 
 //SWIPER JS CODE ENDS HERE
 
+// PRELOADER BEGINS
+window.addEventListener("load", setTimeout(function(){
+  const loader = document.querySelector('.loader');
+  loader.classList.add('loaded');
+},2500));
+
+// PRELOADER ENDS
