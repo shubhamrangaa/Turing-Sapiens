@@ -17,6 +17,34 @@ togglebtn.onclick = () => {
     }
 };
 
+//FORM POP UP BEGINS
+const popWindow_one = document.getElementById('mentor');
+const popWindow_two = document.getElementById('partner');
+const popWindow_three = document.getElementById('team');
+const bg_one = document.querySelector('.bg-modal');
+const bg_two = document.querySelector('.bg-modal2');
+const bg_three = document.querySelector('.bg-modal3');
+popWindow_one.onclick = () => {
+    bg_one.classList.toggle('show-form');
+    console.log('hello');
+};
+popWindow_two.onclick = () => {
+  bg_two.classList.toggle('show-form');
+  console.log('hello');
+};
+popWindow_three.onclick = () => {
+  bg_three.classList.toggle('show-form');
+  console.log('hello');
+};
+
+document.querySelector('.close').addEventListener('click', function(){
+  document.querySelector('.bg-modal').style.visibility = 'hidden';
+  document.querySelector('.bg-modal2').style.visibility = 'hidden';
+  document.querySelector('.bg-modal3').style.visibility = 'hidden';
+});
+
+//FORM POP UP ENDS
+
 //SWIPER JS CODE STARTS HERE
 var mySwiper = new Swiper('.swiper-container', {
       
@@ -51,31 +79,13 @@ var mySwiper = new Swiper('.swiper-container', {
       
     },
   }
-})
-/*loop: true,
-
-// If we need pagination
-pagination: {
-  el: '.swiper-pagination',
-},
-
-// Navigation arrows
-navigation: {
-  nextEl: '.swiper-button-next',
-  prevEl: '.swiper-button-prev',
-},
-
-// And if we need scrollbar
-scrollbar: {
-  el: '.swiper-scrollbar',
-},*/
-
+});
 //SWIPER JS CODE ENDS HERE
 
 // PRELOADER BEGINS
-// window.addEventListener("load", setTimeout(function(){
-//   const loader = document.querySelector('.loader');
-//   loader.classList.add('loaded');
-// },2500));
+window.addEventListener("load", setTimeout(function(){
+  const loader = document.querySelector('.loader');
+  loader.classList.add('loaded');
+},2500));
 
 // PRELOADER ENDS

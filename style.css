@@ -308,6 +308,51 @@ p {
   margin: 0 auto;
 }
 
+#landing .header .butt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#landing .header .butt #mentor {
+  font-family: 'Inconsolata';
+  font-size: 1.5rem;
+  font-weight: 400;
+  background: #060606;
+  border: 1.5px solid #fff;
+  border-radius: .35rem;
+  padding: .5rem 2rem;
+  color: #fff;
+}
+
+#landing .header .butt #partner {
+  font-family: 'Inconsolata';
+  font-size: 1.5rem;
+  font-weight: 400;
+  background: #060606;
+  border: 1.5px solid #fff;
+  border-radius: .35rem;
+  padding: .5rem 2rem;
+  color: #fff;
+}
+
+#landing .header .butt #team {
+  font-family: 'Inconsolata';
+  font-size: 1.5rem;
+  font-weight: 400;
+  background: #060606;
+  border: 1.5px solid #fff;
+  border-radius: .35rem;
+  padding: .5rem 2rem;
+  color: #fff;
+}
+
 #contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -772,5 +817,471 @@ footer .footer4 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.bg-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  -webkit-transition: 2s ease-in;
+  transition: 2s ease-in;
+}
+
+.bg-modal .modal-content {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bg-modal .modal-content #contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5rem 0rem;
+}
+
+.bg-modal .modal-content #contact .container-main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1250px;
+}
+
+.bg-modal .modal-content #contact .container-main .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.bg-modal .modal-content #contact .container-main .img-container svg {
+  fill: var(--text-dark);
+}
+
+@media only screen and (max-width: 650px) {
+  .bg-modal .modal-content #contact .container-main .img-container {
+    display: none;
+  }
+}
+
+.bg-modal .modal-content #contact .container-main .form-container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 650px;
+}
+
+@media only screen and (max-width: 650px) {
+  .bg-modal .modal-content #contact .container-main .form-container {
+    max-width: 300px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+.bg-modal .modal-content #contact .container-main .form-container h3 {
+  padding-bottom: 2rem;
+}
+
+.bg-modal .modal-content #contact .container-main .form-container .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bg-modal .modal-content #contact .container-main .form-container .form input {
+  font-family: 'Inconsolata';
+  font-size: 1.25rem;
+  color: var(--text-grey);
+  background-color: var(--bg);
+  border: none;
+  border-bottom: 2px solid var(--text-dark);
+  min-width: 300px;
+  margin-right: 1rem;
+  margin-bottom: 5rem;
+  padding: .5rem 0rem;
+  outline: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .bg-modal .modal-content #contact .container-main .form-container .form input {
+    margin-bottom: 3rem;
+  }
+}
+
+.bg-modal .modal-content #contact .container-main .form-container .form input:last-child {
+  min-width: 616px;
+}
+
+@media only screen and (max-width: 650px) {
+  .bg-modal .modal-content #contact .container-main .form-container .form input:last-child {
+    min-width: 300px;
+    margin-bottom: 5rem;
+  }
+}
+
+.bg-modal .modal-content #contact .container-main .form-container .join-us {
+  font-size: 1.25rem;
+}
+
+.bg-modal .modal-content .close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.bg-modal2 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  -webkit-transition: 2s ease-in;
+  transition: 2s ease-in;
+}
+
+.bg-modal2 .modal-content2 {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bg-modal2 .modal-content2 #contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5rem 0rem;
+}
+
+.bg-modal2 .modal-content2 #contact .container-main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1250px;
+}
+
+.bg-modal2 .modal-content2 #contact .container-main .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.bg-modal2 .modal-content2 #contact .container-main .img-container svg {
+  fill: var(--text-dark);
+}
+
+@media only screen and (max-width: 650px) {
+  .bg-modal2 .modal-content2 #contact .container-main .img-container {
+    display: none;
+  }
+}
+
+.bg-modal2 .modal-content2 #contact .container-main .form-container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 650px;
+}
+
+@media only screen and (max-width: 650px) {
+  .bg-modal2 .modal-content2 #contact .container-main .form-container {
+    max-width: 300px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+.bg-modal2 .modal-content2 #contact .container-main .form-container h3 {
+  padding-bottom: 2rem;
+}
+
+.bg-modal2 .modal-content2 #contact .container-main .form-container .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bg-modal2 .modal-content2 #contact .container-main .form-container .form input {
+  font-family: 'Inconsolata';
+  font-size: 1.25rem;
+  color: var(--text-grey);
+  background-color: var(--bg);
+  border: none;
+  border-bottom: 2px solid var(--text-dark);
+  min-width: 300px;
+  margin-right: 1rem;
+  margin-bottom: 5rem;
+  padding: .5rem 0rem;
+  outline: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .bg-modal2 .modal-content2 #contact .container-main .form-container .form input {
+    margin-bottom: 3rem;
+  }
+}
+
+.bg-modal2 .modal-content2 #contact .container-main .form-container .form input:last-child {
+  min-width: 616px;
+}
+
+@media only screen and (max-width: 650px) {
+  .bg-modal2 .modal-content2 #contact .container-main .form-container .form input:last-child {
+    min-width: 300px;
+    margin-bottom: 5rem;
+  }
+}
+
+.bg-modal2 .modal-content2 #contact .container-main .form-container .join-us {
+  font-size: 1.25rem;
+}
+
+.bg-modal2 .modal-content2 .close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.bg-modal3 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  -webkit-transition: 2s ease-in;
+  transition: 2s ease-in;
+}
+
+.bg-modal3 .modal-content3 {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bg-modal3 .modal-content3 #contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5rem 0rem;
+}
+
+.bg-modal3 .modal-content3 #contact .container-main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1250px;
+}
+
+.bg-modal3 .modal-content3 #contact .container-main .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.bg-modal3 .modal-content3 #contact .container-main .img-container svg {
+  fill: var(--text-dark);
+}
+
+@media only screen and (max-width: 650px) {
+  .bg-modal3 .modal-content3 #contact .container-main .img-container {
+    display: none;
+  }
+}
+
+.bg-modal3 .modal-content3 #contact .container-main .form-container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 650px;
+}
+
+@media only screen and (max-width: 650px) {
+  .bg-modal3 .modal-content3 #contact .container-main .form-container {
+    max-width: 300px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+.bg-modal3 .modal-content3 #contact .container-main .form-container h3 {
+  padding-bottom: 2rem;
+}
+
+.bg-modal3 .modal-content3 #contact .container-main .form-container .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bg-modal3 .modal-content3 #contact .container-main .form-container .form input {
+  font-family: 'Inconsolata';
+  font-size: 1.25rem;
+  color: var(--text-grey);
+  background-color: var(--bg);
+  border: none;
+  border-bottom: 2px solid var(--text-dark);
+  min-width: 300px;
+  margin-right: 1rem;
+  margin-bottom: 5rem;
+  padding: .5rem 0rem;
+  outline: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .bg-modal3 .modal-content3 #contact .container-main .form-container .form input {
+    margin-bottom: 3rem;
+  }
+}
+
+.bg-modal3 .modal-content3 #contact .container-main .form-container .form input:last-child {
+  min-width: 616px;
+}
+
+@media only screen and (max-width: 650px) {
+  .bg-modal3 .modal-content3 #contact .container-main .form-container .form input:last-child {
+    min-width: 300px;
+    margin-bottom: 5rem;
+  }
+}
+
+.bg-modal3 .modal-content3 #contact .container-main .form-container .join-us {
+  font-size: 1.25rem;
+}
+
+.bg-modal3 .modal-content3 .close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.show-form {
+  visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */

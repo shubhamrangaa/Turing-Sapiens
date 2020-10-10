@@ -247,8 +247,48 @@ p{
             width: fit-content;
             margin: 0 auto;
         }
+        .butt{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+          //  justify-content: center;
+            #mentor{
+                //flex: 1;
+               font-family: 'Inconsolata';
+               font-size: 1.5rem;
+              font-weight: 400;
+              background: $primary-dark;
+              border: 1.5px solid $primary-light;
+              border-radius: .35rem;
+              padding: .5rem 2rem;
+              color: $primary-light;
+           }
+            #partner{
+            //   flex: 1;
+               font-family: 'Inconsolata';
+               font-size: 1.5rem;
+              font-weight: 400;
+              background: $primary-dark;
+              border: 1.5px solid $primary-light;
+              border-radius: .35rem;
+              padding: .5rem 2rem;
+              color: $primary-light;
+           }
+            #team{
+              // flex: 1;
+               font-family: 'Inconsolata';
+               font-size: 1.5rem;
+              font-weight: 400;
+              background: $primary-dark;
+              border: 1.5px solid $primary-light;
+              border-radius: .35rem;
+              padding: .5rem 2rem;
+              color: $primary-light;
+           }
+       }
+       }
     }
-}
+
 // LANDING ENDS
 
 // CONTACT BEGINS
@@ -609,3 +649,321 @@ p{
  
 
 //FOOTER ENDS
+//join us forms section
+
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility :hidden;
+    transition: 2s ease-in;
+    .modal-content{
+        position: relative;
+        width: 80%;
+        height: 80%;
+        background-color: white;
+        border-radius:6px ;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        
+        #contact{
+            display: flex;
+            justify-content: center;
+            margin: 5rem 0rem;
+           .container-main{
+               width: 100%;
+               display: flex;
+               flex-direction: row;
+               flex-wrap: wrap;
+               justify-content: space-around;
+               max-width: 1250px;
+               
+                .img-container{
+                    display: flex;
+                    align-self: center;
+                    svg{
+                        fill: var(--text-dark);
+                    }
+                    @media only screen and (max-width: 650px){
+                            display: none;
+                    }
+                }
+        
+               .form-container{
+                    align-self: center;
+                    max-width: 650px;
+                    
+                    @media only screen and (max-width: 650px){
+                        max-width: 300px;
+                        justify-self: center;
+                    }
+                    h3{
+                        
+                        padding-bottom: 2rem;
+                    }
+                  .form{
+                    display: flex;
+                    flex-wrap: wrap;
+        
+                    input{
+                        font-family: 'Inconsolata';
+                        font-size: 1.25rem;
+                        color: var(--text-grey);
+                        background-color: var(--bg);
+                        border: none;
+                        border-bottom: 2px solid var(--text-dark);
+                        min-width: 300px;
+                        margin-right: 1rem;
+                        margin-bottom: 5rem;
+                        padding: .5rem 0rem;
+                        outline: none;
+                        @media only screen and (max-width: 650px){
+                            margin-bottom: 3rem;
+                        }
+                        
+                        
+                        &:last-child{
+                            min-width: 616px;
+                            @media only screen and (max-width: 650px){
+                                min-width: 300px;
+                                margin-bottom: 5rem;
+                            }
+                        }
+                    }
+                  }
+                  .join-us{
+                      font-size: 1.25rem;
+        
+                  }
+               }
+           }
+        } 
+        .close{
+            position: absolute;
+            top: 0;
+            right: 10px ;
+            font-size: 2rem;
+           // transform: rotate(45deg);
+            cursor: pointer;
+         }
+    }
+}
+.bg-modal2{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility :hidden;
+    transition: 2s ease-in;
+    .modal-content2{
+        position: relative;
+        width: 80%;
+        height: 80%;
+        background-color: white;
+        border-radius:6px ;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        
+        #contact{
+            display: flex;
+            justify-content: center;
+            margin: 5rem 0rem;
+           .container-main{
+               width: 100%;
+               display: flex;
+               flex-direction: row;
+               flex-wrap: wrap;
+               justify-content: space-around;
+               max-width: 1250px;
+               
+                .img-container{
+                    display: flex;
+                    align-self: center;
+                    svg{
+                        fill: var(--text-dark);
+                    }
+                    @media only screen and (max-width: 650px){
+                            display: none;
+                    }
+                }
+        
+               .form-container{
+                    align-self: center;
+                    max-width: 650px;
+                    
+                    @media only screen and (max-width: 650px){
+                        max-width: 300px;
+                        justify-self: center;
+                    }
+                    h3{
+                        
+                        padding-bottom: 2rem;
+                    }
+                  .form{
+                    display: flex;
+                    flex-wrap: wrap;
+        
+                    input{
+                        font-family: 'Inconsolata';
+                        font-size: 1.25rem;
+                        color: var(--text-grey);
+                        background-color: var(--bg);
+                        border: none;
+                        border-bottom: 2px solid var(--text-dark);
+                        min-width: 300px;
+                        margin-right: 1rem;
+                        margin-bottom: 5rem;
+                        padding: .5rem 0rem;
+                        outline: none;
+                        @media only screen and (max-width: 650px){
+                            margin-bottom: 3rem;
+                        }
+                        
+                        
+                        &:last-child{
+                            min-width: 616px;
+                            @media only screen and (max-width: 650px){
+                                min-width: 300px;
+                                margin-bottom: 5rem;
+                            }
+                        }
+                    }
+                  }
+                  .join-us{
+                      font-size: 1.25rem;
+        
+                  }
+               }
+           }
+        } 
+        .close{
+            position: absolute;
+            top: 0;
+            right: 10px ;
+            font-size: 2rem;
+           // transform: rotate(45deg);
+            cursor: pointer;
+         }
+    }
+}
+.bg-modal3{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility :hidden;
+    transition: 2s ease-in;
+    .modal-content3{
+        position: relative;
+        width: 80%;
+        height: 80%;
+        background-color: white;
+        border-radius:6px ;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        
+        #contact{
+            display: flex;
+            justify-content: center;
+            margin: 5rem 0rem;
+           .container-main{
+               width: 100%;
+               display: flex;
+               flex-direction: row;
+               flex-wrap: wrap;
+               justify-content: space-around;
+               max-width: 1250px;
+               
+                .img-container{
+                    display: flex;
+                    align-self: center;
+                    svg{
+                        fill: var(--text-dark);
+                    }
+                    @media only screen and (max-width: 650px){
+                            display: none;
+                    }
+                }
+        
+               .form-container{
+                    align-self: center;
+                    max-width: 650px;
+                    
+                    @media only screen and (max-width: 650px){
+                        max-width: 300px;
+                        justify-self: center;
+                    }
+                    h3{
+                        
+                        padding-bottom: 2rem;
+                    }
+                  .form{
+                    display: flex;
+                    flex-wrap: wrap;
+        
+                    input{
+                        font-family: 'Inconsolata';
+                        font-size: 1.25rem;
+                        color: var(--text-grey);
+                        background-color: var(--bg);
+                        border: none;
+                        border-bottom: 2px solid var(--text-dark);
+                        min-width: 300px;
+                        margin-right: 1rem;
+                        margin-bottom: 5rem;
+                        padding: .5rem 0rem;
+                        outline: none;
+                        @media only screen and (max-width: 650px){
+                            margin-bottom: 3rem;
+                        }
+                        
+                        
+                        &:last-child{
+                            min-width: 616px;
+                            @media only screen and (max-width: 650px){
+                                min-width: 300px;
+                                margin-bottom: 5rem;
+                            }
+                        }
+                    }
+                  }
+                  .join-us{
+                      font-size: 1.25rem;
+        
+                  }
+               }
+           }
+        } 
+        .close{
+            position: absolute;
+            top: 0;
+            right: 10px ;
+            font-size: 2rem;
+           // transform: rotate(45deg);
+            cursor: pointer;
+         }
+    }
+}
+
+.show-form{
+    visibility: visible;   
+}
