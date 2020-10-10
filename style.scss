@@ -7,6 +7,7 @@ $primary-dark: #060606;
 $primary-light: #fff;
 $grey-light: #BFBFBF;
 $grey-dark: #2D2C2C;
+$footer-blue: #13141D;
 
 // ELEMENT VARIABLES
 .light{
@@ -69,7 +70,14 @@ h2{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     @media only screen and (max-width: 500px){
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+    }
+}
+
+h3{
+    font-size: 1.8rem;
+    @media only screen and (max-width: 500px){
+        font-size: 1.35rem;
     }
 }
 
@@ -96,6 +104,7 @@ p{
 // BUTTON STYLES
 .join-us{
     font-family: 'Inconsolata';
+    width: fit-content;
     font-size: 1.5rem;
     font-weight: 400;
     background: $primary-dark;
@@ -196,7 +205,7 @@ p{
 
 #navbar-menu{
     width: 100%;
-    height: 60px;
+    height: 70px;
    
     position: fixed;
     background-color:var(--bg);
@@ -208,9 +217,16 @@ p{
         img{
             padding: .5rem;
             object-fit: cover;
-            height: 50px;
-            width: 50px;
+            height: 60px;
+            width: 60px;
         }
+    }
+
+    .on-right{
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+
     }
 }
 // NAVBAR ENDS
@@ -227,7 +243,7 @@ p{
         flex-direction: column;
         justify-content: center;
 
-        button{
+        a{
             width: fit-content;
             margin: 0 auto;
         }
@@ -239,42 +255,73 @@ p{
 #contact{
     display: flex;
     justify-content: center;
-    width: 100%;
+    margin: 5rem 0rem;
    .container-main{
+       width: 100%;
        display: flex;
        flex-direction: row;
        flex-wrap: wrap;
-       justify-content: center;
-       width: 100%;
-        div{
-           padding: 50px;
+       justify-content: space-around;
+       max-width: 1250px;
+       
+        .img-container{
+            display: flex;
+            align-self: center;
+            svg{
+                fill: var(--text-dark);
+            }
+            @media only screen and (max-width: 650px){
+                    display: none;
+            }
         }
 
-        .img-container{
-           flex: 1;
-           left: 40px;
-           padding-left: 350px;
-           width: 50%;
-          }
-
        .form-container{
-              flex: 1;    
-              padding-right: 500px;
-              align-self: center;
-              justify-content: center;    
-
-          }  
+            align-self: center;
+            max-width: 650px;
+            
+            @media only screen and (max-width: 650px){
+                max-width: 300px;
+                justify-self: center;
+            }
+            h3{
+                
+                padding-bottom: 2rem;
+            }
           .form{
-            border :none;
+            display: flex;
+            flex-wrap: wrap;
+
+            input{
+                font-family: 'Inconsolata';
+                font-size: 1.25rem;
+                color: var(--text-grey);
+                background-color: var(--bg);
+                border: none;
+                border-bottom: 2px solid var(--text-dark);
+                min-width: 300px;
+                margin-right: 1rem;
+                margin-bottom: 5rem;
+                padding: .5rem 0rem;
+                outline: none;
+                @media only screen and (max-width: 650px){
+                    margin-bottom: 3rem;
+                }
+                
+                
+                &:last-child{
+                    min-width: 616px;
+                    @media only screen and (max-width: 650px){
+                        min-width: 300px;
+                        margin-bottom: 5rem;
+                    }
+                }
+            }
+          }
+          .join-us{
+              font-size: 1.25rem;
 
           }
-
-            a{
-              text-decoration :0;
-              border: 2px;
-
-              border-color: #fff;
-            }
+       }
    }
 } 
 // ABOUT US BEGINS
@@ -503,17 +550,23 @@ p{
 //FOOTER BEGINS
 
     footer{
-        
+       
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        margin: 0 auto;
+        // margin: 0 auto;
+        padding: 2rem 0rem;
         justify-content: space-between;
-        background-color: $primary-dark;
+        background-color: $footer-blue;
         a,h3,p{
             color: $primary-light;
+            
         }
-        
+        p{
+            font-family: 'Inconsolata';
+            font-size: 1.125rem;
+            line-height: 1.5;
+        }
         
         @media only screen and (max-width :600px){
           flex-direction: column;

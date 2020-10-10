@@ -73,9 +73,9 @@ scrollbar: {
 //SWIPER JS CODE ENDS HERE
 
 // PRELOADER BEGINS
-window.addEventListener("load", setTimeout(function(){
-  const loader = document.querySelector('.loader');
-  loader.classList.add('loaded');
-},2500));
+// window.addEventListener("load", setTimeout(function(){
+//   const loader = document.querySelector('.loader');
+//   loader.classList.add('loaded');
+// },2500));
 
 // PRELOADER ENDS

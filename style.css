@@ -68,7 +68,17 @@ h2 {
 
 @media only screen and (max-width: 500px) {
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 500px) {
+  h3 {
+    font-size: 1.35rem;
   }
 }
 
@@ -99,6 +109,9 @@ p {
 
 .join-us {
   font-family: 'Inconsolata';
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 1.5rem;
   font-weight: 400;
   background: #060606;
@@ -232,7 +245,7 @@ p {
 
 #navbar-menu {
   width: 100%;
-  height: 60px;
+  height: 70px;
   position: fixed;
   background-color: var(--bg);
   display: -webkit-box;
@@ -248,8 +261,18 @@ p {
   padding: .5rem;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
+}
+
+#navbar-menu .on-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
 }
 
 #landing {
@@ -278,7 +301,7 @@ p {
           justify-content: center;
 }
 
-#landing .header button {
+#landing .header a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -292,10 +315,11 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
+  margin: 5rem 0rem;
 }
 
 #contact .container-main {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,47 +329,89 @@ p {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-#contact .container-main div {
-  padding: 50px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1250px;
 }
 
 #contact .container-main .img-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  left: 40px;
-  padding-left: 350px;
-  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+#contact .container-main .img-container svg {
+  fill: var(--text-dark);
+}
+
+@media only screen and (max-width: 650px) {
+  #contact .container-main .img-container {
+    display: none;
+  }
 }
 
 #contact .container-main .form-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding-right: 500px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  max-width: 650px;
 }
 
-#contact .container-main .form {
+@media only screen and (max-width: 650px) {
+  #contact .container-main .form-container {
+    max-width: 300px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+#contact .container-main .form-container h3 {
+  padding-bottom: 2rem;
+}
+
+#contact .container-main .form-container .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#contact .container-main .form-container .form input {
+  font-family: 'Inconsolata';
+  font-size: 1.25rem;
+  color: var(--text-grey);
+  background-color: var(--bg);
   border: none;
+  border-bottom: 2px solid var(--text-dark);
+  min-width: 300px;
+  margin-right: 1rem;
+  margin-bottom: 5rem;
+  padding: .5rem 0rem;
+  outline: none;
 }
 
-#contact .container-main a {
-  -webkit-text-decoration: 0;
-          text-decoration: 0;
-  border: 2px;
-  border-color: #fff;
+@media only screen and (max-width: 650px) {
+  #contact .container-main .form-container .form input {
+    margin-bottom: 3rem;
+  }
+}
+
+#contact .container-main .form-container .form input:last-child {
+  min-width: 616px;
+}
+
+@media only screen and (max-width: 650px) {
+  #contact .container-main .form-container .form input:last-child {
+    min-width: 300px;
+    margin-bottom: 5rem;
+  }
+}
+
+#contact .container-main .form-container .join-us {
+  font-size: 1.25rem;
 }
 
 .info-main {
@@ -635,15 +701,21 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0 auto;
+  padding: 2rem 0rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #060606;
+  background-color: #13141D;
 }
 
 footer a, footer h3, footer p {
   color: #fff;
+}
+
+footer p {
+  font-family: 'Inconsolata';
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 
 @media only screen and (max-width: 600px) {
