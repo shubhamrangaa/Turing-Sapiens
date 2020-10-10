@@ -80,7 +80,23 @@ h3{
         font-size: 1.35rem;
     }
 }
+h4{
+    font-size: 1.5rem;
+    @media only screen and (max-width: 500px){
+        font-size: 1.45rem;
+    }
+}
 
+small{
+    font-family: 'Inconsolata';
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    font-weight: 400;
+
+@media only screen and (max-width: 500px){
+    font-size: 1.125rem;
+}
+}
 h5{
     font-family: 'Inconsolata';
     color: var(--text-dark);
@@ -293,6 +309,7 @@ p{
 
 // CONTACT BEGINS
 #contact{
+    height: 100vh;
     display: flex;
     justify-content: center;
     margin: 5rem 0rem;
@@ -558,9 +575,11 @@ p{
 
 // PARTNERS PAGE BEGINS
 #partners{
+    height: 100vh;
     display: grid;
+    align-items: center;
     grid-template-columns: 1.25fr 1fr;
-    margin: 10rem auto;
+    margin: 0 auto;
     max-width: 1400px;
 
     @media only screen and (max-width:900px) {
@@ -590,60 +609,79 @@ p{
 //FOOTER BEGINS
 
     footer{
-       
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        // margin: 0 auto;
-        padding: 2rem 0rem;
-        justify-content: space-between;
+        display: grid;
+        padding: 5rem 2rem;
         background-color: $footer-blue;
-        a,h3,p{
-            color: $primary-light;
-            
+        grid-template-columns: 1fr 1fr .5fr 1fr;
+
+        @media only screen and (max-width:1000px){
+            grid-template-columns: 1fr 1fr ;
+        }
+
+        @media only screen and (max-width:600px){
+            grid-template-columns: 1fr;
+            padding: 2rem 1rem;
+            gap: 1rem;
+            align-items: center;
+        }
+        a{
+            font-size: 1.125rem;
+            line-height: 2;
+            color: $grey-light;
         }
         p{
             font-family: 'Inconsolata';
             font-size: 1.125rem;
-            line-height: 1.5;
+            line-height: 2.5;
+            color: $grey-light;
+        }
+        ul{
+            list-style-type: none;
+            color: $grey-light;
+            font-family: 'Inconsolata';
+            font-size: 1.125rem;
+            line-height: 2rem;
+            
+            
+            li:hover, a:hover, svg:hover{
+                color: #f0e9ff;
+                cursor: pointer;
+                transition: .2s ease-in;
+            }
         }
         
         @media only screen and (max-width :600px){
           flex-direction: column;
           align-items: center;
         }
-        .footer-heading{
-           // flex: 1;
-            margin-top: 20px;
-        } 
-        .footer1{
-            flex: 1;
+        
+        .footer-logo{
             display:flex;
-            flex-direction: row;
-            .logo-1{
-                img{
-                    height: 70px;
-                    width:70px;
-                }
-            }
-            .logo-2{
-                h3{
-                  font-size: 1.5rem;
-                }
+            flex-direction: row; 
+            
+            img{
+                height: 70px;
+                width:70px;
+                margin-right: 1rem;
+            }        
+            h3{
+                font-size: 1.5rem;
             }
         }
-        .footer2{
-            flex: 0.5;
-         
+
+        .footer-socials{
+            display: flex;
+            flex-direction: column;
+            
+            svg{
+                margin-top: 1rem;
+                fill: white;
+                &:hover{
+                    fill: #ece3ff;
+                }
+            }
         }
-        .footer3{
-            flex: 1;
-           
-        }
-         .footer4{
-            flex: 1;
-          
-        }
+        
     }
 
  
