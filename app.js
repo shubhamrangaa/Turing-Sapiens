@@ -62,12 +62,12 @@ var mySwiper = new Swiper('.swiper-container', {
       slidesPerView: 1,
       spaceBetween: 50,
     },
-    690: {
+    590: {
       slidesPerView: 2,
       spaceBetween: 30,
       
     },
-    1043: {
+    800: {
       slidesPerView: 3,
       spaceBetween: 30,
       

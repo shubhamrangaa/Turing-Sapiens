@@ -4,22 +4,30 @@
 // COLOR PALETTE
 
 $primary-dark: #060606;
+$secondary-dark: #1f1f1f;
 $primary-light: #fff;
+$secondary-light: #ececec;
 $grey-light: #BFBFBF;
 $grey-dark: #2D2C2C;
 $footer-blue: #13141D;
 
+
 // ELEMENT VARIABLES
 .light{
+   
     --bg: #{$primary-light};
     --text-grey: #{$grey-dark};
     --text-dark: #{$primary-dark};
+    --bg-secondary: #{$secondary-light};
+    --swiper-theme-color: rgb(0, 0, 0) !important;
 }
 
 .dark{
+    --bg-secondary: #{$secondary-dark};
     --bg: #{$primary-dark};
     --text-grey: #{$grey-light};
     --text-dark: #{$primary-light};
+    --swiper-theme-color: #fff !important;
 }
 
 // BASIC CSS
@@ -60,6 +68,11 @@ h1{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding-bottom: 2rem;
+    @media only screen and (max-width: 525px){
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 h2{
     font-size: 2.25rem;
@@ -77,7 +90,7 @@ h2{
 h3{
     font-size: 1.8rem;
     @media only screen and (max-width: 500px){
-        font-size: 1.35rem;
+        font-size: 1.45rem;
     }
 }
 h4{
@@ -196,6 +209,24 @@ p{
             animation-delay: 1.5s;
            }
            
+           @media only screen and (max-width:800px){
+               width: 50px !important;
+               display: flex;
+               align-items: baseline;
+
+               &:nth-child(2){
+                    height: 70px;
+                }
+               &:nth-child(3){
+                    height: 90px;
+                }
+               &:nth-child(5){
+                    height: 130px;
+                }
+               &:nth-child(6){
+                display: none;
+                }
+           }
         }
     }
 }
@@ -204,10 +235,6 @@ p{
     from{opacity: 0;}
    
     to{opacity: 1;}
-}
-
-.hidden{
-    display: none;
 }
 
 .loaded{
@@ -230,11 +257,12 @@ p{
     z-index: 1000;
 
     figure{
-        img{
-            padding: .5rem;
-            object-fit: cover;
-            height: 60px;
-            width: 60px;
+        svg{
+            padding: 1rem;
+            
+            height: 70px;
+            width: 70px;
+            stroke: var(--text-dark) !important;
         }
     }
 
@@ -382,41 +410,33 @@ p{
    }
 } 
 // ABOUT US BEGINS
- .info-main{
-     display: flex;
-     flex-direction: row;
-     flex-wrap: wrap;
-     justify-content: center;
-     max-width: 1150px;
-     //border: 1px solid white;
+ .about-container{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 1.5rem;
+     max-width: 1300px;
      margin: 0 auto;
-        h3{
-            font-size: 2.2rem;
-        }
-        .container-vis{
-         padding-right: 160px;
-         flex: 1;   
-         line-height: 50px; 
+    padding: 0rem 2rem;
+    @media only screen and (max-width:800px){
+        grid-template-columns: 1fr;
         
+        .about-info p:last-child{
+            
+            display: none;
         }
-        .container-info{
-        padding-top: 40px;
-        flex: 1;
-        .small-font{
-              font-size: 1rem;
-          }
-        }
+    }
     }
 
 /*swiper implementation*/
 
   
 .swiper-container{
-    height: 500px;
+    height: 300px;
     max-width: 1300px;
-    margin: 0 auto;
-   
-   
+    margin: 5rem auto;
+    @media only screen and (max-width:500px){
+        margin: 2rem auto;
+    }
     .swiper-wrapper{
         height: 100%;
         display: flex;
@@ -429,18 +449,24 @@ p{
         align-items: center;
         justify-content: center;
         position: relative;
+        
         figure{
+            
             img{
                 border-radius: 10px;
                 width:250px;
                 height: 250px;
+                opacity: .7;
+                transition: .5s ease-out;
+                object-fit: cover;
             }
+            
         }
         .overlay{
             width: 250px;
             height: 250px;
             border-radius: 10px;
-            background-image: linear-gradient(to top, black 7%,transparent);
+            background-image: linear-gradient(to top, $primary-dark,transparent);
             position: absolute;
             display: flex;
             justify-content: center;
@@ -449,10 +475,24 @@ p{
 
             a{
                 font-family: 'Poppins';
+                font-size: 1.5rem;
                 color: $primary-light;
+            }
+        }
+        &:hover{
+            img{
+                opacity: 1;
             }
         }      
     }
+}
+
+.swiper-pagination{
+    transform: translateY(2rem);
+    @media only screen and (min-width:1100px){
+        display: none;
+    }
+    
 }
 
 // ABOUT US ENDS
@@ -575,32 +615,40 @@ p{
 
 // PARTNERS PAGE BEGINS
 #partners{
-    height: 100vh;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1.25fr 1fr;
-    margin: 0 auto;
-    max-width: 1400px;
+    background: var(--bg-secondary) !important;
+    
 
-    @media only screen and (max-width:900px) {
-        grid-template-columns:  1fr;
-    }
-    .partner-images{
+    .partner-container{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1.25fr 1fr;
+        margin: 0 auto;
+        max-width: 1400px;
+        padding: 3rem 0rem;
+
         @media only screen and (max-width:900px) {
-            display: none;
+            grid-template-columns:  1fr;
         }
-        img{
-            width: 350px;
-            height: 175px;
+        .partner-images{
+           
+           padding: 1rem;
+            @media only screen and (max-width:900px) {
+                display: none;
+            }
+            img{
+                width: 325px;
+                height: 175px;
+                object-fit: cover;
+            }
         }
-    }
-
-    .partner-info{
-        
-        padding: 2rem;
-        
-        .join-us{
-            margin-top: 2rem;
+    
+        .partner-info{
+            
+            padding: 2rem;
+            
+            .join-us{
+                margin-top: 2rem;
+            }
         }
     }
 }
@@ -1004,4 +1052,18 @@ p{
 
 .show-form{
     visibility: visible;   
+}
+
+// SCROLLBAR STYLE
+
+body::-webkit-scrollbar{
+    margin-top: 70px;
+    width: 1rem;
+    
+}
+
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(180.71deg, #FFCD5A 2.24%, #FF4D4D 39.97%, #9360FF 91.68%);
+    border-radius: .5rem;
+    
 }
