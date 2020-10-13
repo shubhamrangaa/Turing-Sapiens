@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body class="dark">
 
@@ -64,7 +64,7 @@
     <!--ABOUT US BEGINS-->
     <section id="about-us">
 
-      <section class="about-container">
+      <section class="about-container" data-aos="fade-up">
         <header class="about-header">
           <small>Who we are</small>
           <h2>
@@ -135,7 +135,7 @@
           <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="companies">
           <img src="https://images.unsplash.com/photo-1531497082986-2422f7b87330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="companies">
       </figure>
-      <article class="partner-info">
+      <article class="partner-info" data-aos="fade-up">
           <small>Our Partners</small>
           <h2>We’ve partnered up with companies blah blah</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel quam euismod purus blandit tincidunt ut sit amet odio. Morbi venenatis ligula ac orci feugiat tempor aliquam et ex. Nulla fermentum eleifend enim. Vivamus velit velit, aliquam nec fringilla vel, fringilla vel sapien.</p>
@@ -147,7 +147,7 @@
 
     <!-- MEET THE TEAM BEGINS -->
     <section id="meet-the-team">
-      <header>
+      <header data-aos="fade-up">
         <h2>Meet The Team</h2>
         <h5>"Talent wins games, but teamwork and intelligence win championships."</h5>
       </header>
@@ -225,7 +225,7 @@
             </div>
             </article>
       </section>
-      <div class="team-links">
+      <div class="team-links" data-aos="fade-up">
         <a href="team.html" class="fill">Meet the team</a>
         <a href="join.html" class="join-us">Join Us</a>
       </div>
@@ -236,8 +236,8 @@
     <!--CONTACT FORM BEGINS-->
 
     <section id="contact">
-      <div class="container-main">
-        <div class="img-container">
+      <div class="container-main" >
+        <div class="img-container" data-aos="fade-right">
           <svg
             class="img"
             width="290"
@@ -263,14 +263,14 @@
             </defs>
           </svg>
         </div>
-        <div class="form-container">
-          <h2>Let's Talk</h2>
+        <div class="form-container" data-aos="fade-up">
+          <h2 >Let's Talk</h2>
           <h3>Enter your project details</h3>
           <form class="form">
             
             <input type="text" name="creds" placeholder="Name"/>
-            <input type="email" name="creds" placeholder="Email" />
-            <input type="text" name="creds" placeholder="Subject" />
+            <input type="email" name="creds" placeholder="Email"/>
+            <input type="text" name="creds" placeholder="Subject"/>
           </form>
           <a href="#" class="join-us">Send Message</a>
         </div>
@@ -347,6 +347,13 @@
  <!--footer ends-->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset:400,
+        duration : 1000
+      });
+    </script>
     <script src="app.js"></script>
   </body>
 </html>
