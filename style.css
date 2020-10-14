@@ -944,7 +944,7 @@ footer .footer-socials svg:hover {
 }
 
 #landing-join .header h1 {
-  width: 50%;
+  width: 55%;
   text-align: center;
   margin: 0 auto;
 }
@@ -981,7 +981,7 @@ footer .footer-socials svg:hover {
   }
 }
 
-#landing-join .header .form-btn button {
+#landing-join .header .form-btn a {
   margin: 1.5rem 2rem;
 }
 
