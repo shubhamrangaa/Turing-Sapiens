@@ -902,7 +902,8 @@ footer .footer-socials {
 }
 
 footer .footer-socials svg {
-  margin-top: 1rem;
+  margin: .5rem;
+  margin-left: 0;
   fill: white;
 }
 

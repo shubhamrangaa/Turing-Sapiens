@@ -704,11 +704,16 @@ p{
             flex-direction: column;
             
             svg{
-                margin-top: 1rem;
+                margin: .5rem;
+                margin-left: 0;
                 fill: white;
+                
                 &:hover{
                     fill: #ece3ff;
                 }
+            }
+            .linkedin{
+                // transform: translateY(.5rem);
             }
         }
         
