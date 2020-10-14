@@ -39,6 +39,7 @@ $footer-blue: #13141D;
 
 html{
     font-size: 16px;
+    scroll-behavior: smooth;
 }  
 
 body{
@@ -417,7 +418,7 @@ p{
                 border-radius: 10px;
                 width:250px;
                 height: 250px;
-                opacity: .7;
+                opacity: .8;
                 transition: .5s ease-out;
                 object-fit: cover;
             }
@@ -456,6 +457,15 @@ p{
     
 }
 
+#about-us{
+    margin-bottom: 3rem;
+    .team-links{
+        display: flex;
+        justify-content: space-around;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
 // ABOUT US ENDS
 
 // MEET THE TEAM BEGINS
@@ -610,7 +620,7 @@ p{
             
             padding: 2rem;
             
-            .join-us{
+            .team-links{
                 margin-top: 2rem;
             }
         }

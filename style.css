@@ -24,6 +24,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -530,7 +531,7 @@ p {
   border-radius: 10px;
   width: 250px;
   height: 250px;
-  opacity: .7;
+  opacity: .8;
   -webkit-transition: .5s ease-out;
   transition: .5s ease-out;
   -o-object-fit: cover;
@@ -574,6 +575,20 @@ p {
   .swiper-pagination {
     display: none;
   }
+}
+
+#about-us {
+  margin-bottom: 3rem;
+}
+
+#about-us .team-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 #meet-the-team {
@@ -767,7 +782,7 @@ p {
   padding: 2rem;
 }
 
-#partners .partner-container .partner-info .join-us {
+#partners .partner-container .partner-info .team-links {
   margin-top: 2rem;
 }
 
