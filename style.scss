@@ -299,7 +299,7 @@ p{
 
 // CONTACT BEGINS
 #contact, #contact-mentor, #contact-partner, #contact-team{
-    height: 100vh;
+    // height: 100vh;
     display: flex;
     justify-content: center;
     margin: 5rem 0rem;
@@ -310,7 +310,7 @@ p{
        flex-wrap: wrap;
        justify-content: space-around;
        max-width: 1250px;
-       
+       margin: 5rem 0rem;
         .img-container{
             display: flex;
             align-self: center;
@@ -331,7 +331,6 @@ p{
                 justify-self: center;
             }
             h3{
-                
                 padding-bottom: 2rem;
             }
           .form{
@@ -486,8 +485,8 @@ p{
 
     .team-carousel{
         width: 80%;
-        padding: 1rem;
-        margin: 2rem;
+        padding: 4rem 2rem 4rem 2rem;
+        margin: 2rem auto;
         display: flex;
         overflow-x: scroll;
 
@@ -496,18 +495,18 @@ p{
         }
        
         &::-webkit-scrollbar{
-            width: .75rem;
-            height: .75rem;
+            width: .55rem;
+            height: .45rem;
         }
 
         &::-webkit-scrollbar-thumb{
-            background-color: #1a1a1a;
+            background-color: var(--text-grey);
             border-radius: .5rem;
-            box-shadow: inset 2px 2px 2px #2d2c2c5d, inset 2px 2px 2px #5a5a5a5d;
+            box-shadow: inset 2px 2px 2px var(--text-dark), inset 2px 2px 2px var(--text-grey);
         }
 
         &::-webkit-scrollbar-track{
-            background: linear-gradient(90deg, #060606,);
+            background: linear-gradient(90deg, var(--bg),);
         }
         .team-card{
             height: 425px;
@@ -520,10 +519,7 @@ p{
 
             &:hover{
                 transform: translateY(-1.5rem);
-                // .team-overlay{
-                //     background: black;
-                    
-                // }
+                
             }
             &:hover~.team-card{
                 transform: translateX(100px);
@@ -552,14 +548,15 @@ p{
                         position: absolute;
                         bottom: 0.5rem;
                         left: 50%;
+                        width: fit-content;
                         transform: translate(-50%);
-                        h3{
+                        h4{
                             color: $primary-light;
                            
                         }
                         small{
                             color: $grey-light;
-                            font-family: "Open sans";
+                            font-family: "Inconsolata";
                         }
                     }
                 }
@@ -604,8 +601,8 @@ p{
             grid-template-columns:  1fr;
         }
         .partner-images{
-           
            padding: 1rem;
+          
             @media only screen and (max-width:900px) {
                 display: none;
             }
@@ -613,6 +610,10 @@ p{
                 width: 325px;
                 height: 175px;
                 object-fit: cover;
+                @media only screen and (max-width:1250px){
+                    width: 250px;
+                height: 175px;
+                } 
             }
         }
     
@@ -671,6 +672,9 @@ p{
                 transition: .2s ease-in;
             }
         }
+        h3{
+            color: $primary-light;
+        }
         
         @media only screen and (max-width :600px){
           flex-direction: column;
@@ -681,13 +685,17 @@ p{
             display:flex;
             flex-direction: row; 
             
-            img{
-                height: 70px;
-                width:70px;
-                margin-right: 1rem;
-            }        
+                   
             h3{
                 font-size: 1.5rem;
+            }
+
+            svg{
+                padding: 1rem;
+                height: 70px;
+                width: 70px;
+                stroke: $primary-light !important;
+                transform: translateY(-.45rem);
             }
         }
 
@@ -836,7 +844,7 @@ p{
 
 body::-webkit-scrollbar{
     margin-top: 70px;
-    width: 1rem;
+    width: .5rem;
     
 }
 
