@@ -103,9 +103,9 @@
   }
 }
 
-#landingform .form-container .form .join-us {
+/* #landingform .form-container .form .join-us {
   font-size: 3rem;
-}
+} */
 @media only screen and (max-width: 650px) {
   #landingform .form-container .form button {
     min-width: 300px;
