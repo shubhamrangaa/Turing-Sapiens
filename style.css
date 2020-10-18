@@ -455,18 +455,18 @@ p {
   }
 }
 
-#contact .container-main .form-container .form input:last-child, #contact-mentor .container-main .form-container .form input:last-child, #contact-partner .container-main .form-container .form input:last-child, #contact-team .container-main .form-container .form input:last-child {
+#contact .container-main .form-container .form input.long, #contact-mentor .container-main .form-container .form input:last-child, #contact-partner .container-main .form-container .form input:last-child, #contact-team .container-main .form-container .form input:last-child {
   min-width: 616px;
 }
 
 @media only screen and (max-width: 650px) {
-  #contact .container-main .form-container .form input:last-child, #contact-mentor .container-main .form-container .form input:last-child, #contact-partner .container-main .form-container .form input:last-child, #contact-team .container-main .form-container .form input:last-child {
+  #contact .container-main .form-container .form input.long, #contact-mentor .container-main .form-container .form input:last-child, #contact-partner .container-main .form-container .form input:last-child, #contact-team .container-main .form-container .form input:last-child {
     min-width: 300px;
     margin-bottom: 5rem;
   }
 }
 
-#contact .container-main .form-container .join-us, #contact-mentor .container-main .form-container .join-us, #contact-partner .container-main .form-container .join-us, #contact-team .container-main .form-container .join-us {
+#contact .container-main .form-container .form .join-us, #contact-mentor .container-main .form-container .join-us, #contact-partner .container-main .form-container .join-us, #contact-team .container-main .form-container .join-us {
   font-size: 1.25rem;
 }
 
