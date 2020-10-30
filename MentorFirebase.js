@@ -41,8 +41,7 @@ function submitForm(e){
   // Save message
   saveDetails(name, regNo, email, phone, branch, sec, reason, skills, projects, pastExp, gitHub, linkedin);
 
-   window.location.replace("./index.html");
-
+  
   // // Show alert
   // document.querySelector('.alert').style.display = 'block';
 
@@ -77,9 +76,13 @@ function saveDetails(name, regNo, email, phone, branch, sec, reason, skills, pro
 })
 .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
+    window.location.replace("./index.html");
+
 })
 .catch(function(error) {
     console.error("Error adding document: ", error);
+    window.location.replace("./mentorForm.html");
+
 });
 
 	// database.ref('Mentors/' + regNo).set({
