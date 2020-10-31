@@ -1,5 +1,3 @@
-
-
 //FORM POP UP BEGINS
 const popWindow_one = document.getElementById('mentor');
 const popWindow_two = document.getElementById('partner');
