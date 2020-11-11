@@ -61,6 +61,7 @@ h1 {
 
 @media only screen and (max-width: 525px) {
   h1 {
+    font-size: 2.8rem;
     width: 80%;
     text-align: center;
     margin: 0 auto;
@@ -1151,5 +1152,22 @@ body::-webkit-scrollbar-thumb {
 
 #partners-section .partner-container .partner-info .team-links {
   margin-top: 2rem;
+}
+
+#faq {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#faq article {
+  margin-bottom: 5rem;
+  padding: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
