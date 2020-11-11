@@ -861,3 +861,53 @@ body::-webkit-scrollbar-thumb{
     border-radius: .5rem;
     
 }
+
+// PARTNERS PAGE
+
+#partners-section{
+    background: var(--bg) !important;
+    margin-bottom: 2rem;
+    .partner-container{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1.55fr auto;
+        margin: 0 auto;
+        max-width: 1300px;
+        padding: 3rem 0rem;
+        border-bottom: var(--text-grey) .5px solid;
+        background: var(--bg) !important;
+        
+
+        @media only screen and (max-width:600px) {
+            grid-template-columns:  1fr;
+        }
+        .partner-images{
+           padding: 1rem;
+          
+            @media only screen and (max-width:600px) {
+                display: none;
+            }
+            img{
+               width: 200px;
+               height: 200px;
+                object-fit: cover;
+                @media only screen and (max-width:1250px){
+                    width: 200px;
+                    height: 200px;
+                } 
+            }
+        }
+    
+        .partner-info{
+            
+            padding: 2rem;
+            h2{
+                font-size: rem;
+            }
+            .team-links{
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+// PARTNERS PAGE ENDS
