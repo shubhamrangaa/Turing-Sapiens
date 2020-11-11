@@ -805,7 +805,7 @@ p {
 footer {
   display: -ms-grid;
   display: grid;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   background-color: #13141D;
   -ms-grid-columns: 1fr 1fr .5fr 1fr;
       grid-template-columns: 1fr 1fr .5fr 1fr;
@@ -1169,5 +1169,37 @@ body::-webkit-scrollbar-thumb {
 #faq article {
   margin-bottom: 5rem;
   padding: 1rem;
+}
+
+.dev-container {
+  background-color: #13141D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .dev-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+a.developer:hover {
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: linear-gradient(89.71deg, #FFCD5A 2.24%, #FF4D4D 39.97%, #9360FF 91.68%);
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */

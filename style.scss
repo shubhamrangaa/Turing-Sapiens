@@ -637,7 +637,7 @@ p{
 
     footer{
         display: grid;
-        padding: 5rem 2rem;
+        padding: 3rem 2rem;
         background-color: $footer-blue;
         grid-template-columns: 1fr 1fr .5fr 1fr;
 
@@ -925,5 +925,28 @@ body::-webkit-scrollbar-thumb{
     article{
         margin-bottom: 5rem;
         padding: 1rem;
+    }
+}
+
+.dev-container{
+    background-color: $footer-blue;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    @media only screen and(max-width:600px){
+        justify-content: start;
+    }
+}
+a.developer{
+    
+    &:hover{
+        opacity: 1;
+        width: fit-content;
+        background: linear-gradient(89.71deg, #FFCD5A 2.24%, #FF4D4D 39.97%, #9360FF 91.68%) ;
+        text-shadow: none;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
