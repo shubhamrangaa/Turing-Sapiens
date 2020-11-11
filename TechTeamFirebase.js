@@ -18,7 +18,7 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 5;
+const TIME_LIMIT = 10;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -48,6 +48,7 @@ document.getElementById("timer124").innerHTML = `
   )}</span>
 </div>
 `;
+
 
 function onTimesUp() {
   window.location.replace("./index.html");
@@ -113,112 +114,27 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx4M7FKENM3o9h_u13faRfAw3jMBQIJLG7owN-ATQ15dnvjmBA/exec'
 
 
-
-var firebaseConfig = {
-    apiKey: "AIzaSyAIfXhwja-Omwaw6KaboTCRSTD5qb4ujyY",
-    authDomain: "ts-hire.firebaseapp.com",
-    databaseURL: "https://ts-hire.firebaseio.com",
-    projectId: "ts-hire",
-    storageBucket: "ts-hire.appspot.com",
-    messagingSenderId: "1070156142324",
-    appId: "1:1070156142324:web:0faf308666b31b710530a1",
-    measurementId: "G-YMFW7TH0Y2"
-  };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-console.log("chala");
-
-// Reference messages collection
-var db = firebase.firestore();
-
-
-document.getElementById('techTeamForm').addEventListener('submit', submitForm);
+const form = document.getElementById('memberForm');
+form.addEventListener('submit', submitForm);
 
 
 function submitForm(e){
   e.preventDefault();
   console.log("chala");
 
-  // Get values
-  var name = getInputVal('name');
-  var regNo = getInputVal('regNo');
-  var email = getInputVal('email');
-  var phone = getInputVal('phone');
-  var branch = getInputVal('branch');
-  var sec = getInputVal('section');
-  var reason = getInputVal('reason');
-  var skills = getInputVal('skills');
-  var projects = getInputVal('projects');
-  var pastExp = getInputVal('pastExp');
-  var gitHub = getInputVal('gitHub');
-  var linkedin = getInputVal('linkedin');
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(console.log("excel pe gaya"))
+                .catch(error => console.error('Error!', error.message))
 
-
-  // Save message
-  saveDetails(name, regNo, email, phone, branch, sec, reason, skills, projects, pastExp, gitHub, linkedin);
   startTimer();
     modal_container.classList.add('show');
-
-  // window.location.replace("./index.html");
-
-  // // Show alert
-  // document.querySelector('.alert').style.display = 'block';
-
-  // // Hide alert after 3 seconds
-  // setTimeout(function(){
-  //   document.querySelector('.alert').style.display = 'none';
-  // },3000);
 
 }
 
 
 function getInputVal(id){
   return document.getElementById(id).value;
-}
-
-function saveDetails(name, regNo, email, phone, branch, sec, reason, skills, projects, pastExp, gitHub, linkedin) {
-
-
-	db.collection("TechTeam").add({
-    	name: name,
-	    regNo: regNo,
-	    email:email,
-	    phone:phone,
-	    branch: branch,
-	    sec: sec,
-	    reason: reason,
-	    skills: skills,
-	    projects: projects,
-	    pastExp: pastExp,
-	    gitHub: gitHub,
-	    linkedin: linkedin
-})
-.then(function(docRef) {
-    console.log("Document written with ID: ", docRef.id);
-})
-.catch(function(error) {
-    console.error("Error adding document: ", error);
-    
-    window.location.replace("./TechForm.html");
-});
-
-	// database.ref('Mentors/' + regNo).set({
-	// 	name: name,
-	//     regNo: regNo,
-	//     email:email,
-	//     phone:phone,
-	//     branch: branch,
-	//     sec: sec,
-	//     reason: reason,
-	//     projects: projects,
-	//     pastExp: pastExp,
-	//     gitHub: gitHub,
-	//     linkedin: linkedin
-	// });
-  // var newMentorRef = mentorRef.push();
-  // newMentoreRef.set({
-    
-  // });
 }
