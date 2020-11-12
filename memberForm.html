@@ -6,12 +6,6 @@
     <title>Turing sapiens | Member Form</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="formStyle.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
     <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -63,10 +57,10 @@
         <div class="form-container" >
           <form id="memberForm" class="form">
             
-            <input required="yes" id="name" class="long" type="text" name="Name" placeholder="Name *"/>
-            <input required="yes" id="regNo" class="long" type="text" name="Registration Number" placeholder="Registration Number *"/>
-            <input required="yes" id="email" class="long" type="email" name="Email" placeholder="Email *"/>
-            <input required="yes" id="phone" class="long" type="phone" name="Phone" placeholder="Phone *">
+            <input required="yes" id="name" class="long" type="text" name="Name" placeholder="Name"/>
+            <input required="yes" id="regNo" class="long" type="text" name="Registration Number" placeholder="Registration Number"/>
+            <input required="yes" id="email" class="long" type="email" name="Email" placeholder="Email"/>
+            <input required="yes" id="phone" class="long" type="phone" name="Phone" placeholder="Phone">
             <select id="branch" class="long" name="Branch">
               <option value="Branch" selected="yes">Branch</option>
               <option value="Computer Science (CSE)">Computer Science (CSE)</option>
@@ -83,11 +77,16 @@
               <option value="3rd">3rd</option>
               <option value="4th">4th</option>
             </select>
-            <input required="yes" id="section" type="text" name="Section" placeholder="Section *">
+            <input required="yes" id="section" type="text" name="Section" placeholder="Section">
        
-            <button type="submit" class="join-us">Submit</button>
+            <button class="join-us go-to-level">Next</button>
+            <div class="level-2">
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <button type="submit" class="join-us">Submit</button>
+            </div>
           </form>
-           <!-- href="#" class="join-us">Submit</a> -->
         </div>
       </div>
     </section>
@@ -145,8 +144,7 @@
       <ul>
         <li><a href="FAQ.html">FAQs</a></li>
         <li><a href="mailto:turing@muj.manipal.edu">turing@muj.manipal.edu</a></li>
-        <li><a target="_blank"
-            href="https://www.google.com/maps/place/Manipal+University+Jaipur/@26.8438552,75.5630456,17z/data=!3m1!4b1!4m5!3m4!1s0x396c4850e05bee9b:0x1b8d67402d4eb863!8m2!3d26.8438552!4d75.5652343?hl=en">
+        <li><a target="_blank" href="https://www.google.com/maps/place/Manipal+University+Jaipur/@26.8438552,75.5630456,17z/data=!3m1!4b1!4m5!3m4!1s0x396c4850e05bee9b:0x1b8d67402d4eb863!8m2!3d26.8438552!4d75.5652343?hl=en">
             Address:
             Manipal University Jaipur,<br>
             Dehmi Kalan, 303007
@@ -208,7 +206,6 @@
   
       <script src="app.js"></script>
       <script src="join.js"></script>
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
         AOS.init({
           offset:400,
@@ -218,5 +215,6 @@
       <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
       <script src="TechTeamFirebase.js"></script>
-  </body>
+      <script src="member.js"></script>
+    </body>
   </html>

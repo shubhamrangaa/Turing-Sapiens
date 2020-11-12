@@ -63,4 +63,3 @@ var mySwiper = new Swiper('.swiper-container', {
 });
 //SWIPER JS CODE ENDS HERE
 
-

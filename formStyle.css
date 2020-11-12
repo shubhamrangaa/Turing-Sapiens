@@ -1,6 +1,6 @@
 
 #landingform {
-  height: 300vh;  
+  /* height: 300vh;   */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,6 +10,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 3rem;
 }
 
 #landingform .header {
@@ -29,15 +30,13 @@
 
 
 
-
+/* LOTS OF CHANGES HERE */
 #landingform .header h1{
-	width:45%;
+  margin-top: 5rem;
   text-align: center;
-	position: absolute;
-	left: 50%;
-	top: 15%;
-	-ms-transform: translate(-50%, -10%);
-	transform: translate(-50%, -10%);
+  margin-left: auto;
+  margin-right: auto;
+  margin: 5rem auto 3rem auto ;
 }
 
 @media only screen and (max-width: 650px) {
@@ -214,3 +213,12 @@
 .modal h2{
   text-align: center;
 }
+
+/* LEVEL 2 VISIBILITY */
+.level-2{
+  display: none;
+}
+
+  .visible{
+    display: flex ;
+  }
