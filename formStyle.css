@@ -217,8 +217,64 @@
 /* LEVEL 2 VISIBILITY */
 .level-2{
   display: none;
+  width: 100%;
+  margin-top: 2rem;
+  transition: .5s ease-in;
+}
+
+.go-to-level{
+  display: block;
+}
+
+.level-2 figure{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 700px){
+  .level-2 figure img.mock{
+    display: none;
+  }
+}
+
+.level-2 figure div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.level-2 figure div a{
+  margin-top: 2rem;
+}
+.level-2 figure img{
+
+  width: 200px;
+  height: 200px;
+}
+.level-2 figure img:nth-child(2){
+  width: 300px;
+  height: 400px;
+}
+
+.level-2 button:hover{
+  transition: .65s ease ;
+  cursor: pointer;
+  color: rgb(0, 255, 0);
+  border: 1.5px solid rgb(0, 255, 0);
 }
 
   .visible{
-    display: flex ;
+    display: block ;
+    flex-direction: column;
+  }
+
+  .join-us.paytm{
+    color: rgb(27, 153, 255) !important;
+    border: 1.5px solid rgb(27, 153, 255);
   }
