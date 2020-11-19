@@ -1219,4 +1219,9 @@ a.developer:hover {
     height: 2500px !important;
   }
 }
+
+h3.teamText {
+  font-family: inconsolata;
+  font-weight: 400;
+}
 /*# sourceMappingURL=style.css.map */
