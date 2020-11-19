@@ -1202,4 +1202,21 @@ a.developer:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.googleForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .googleForm iframe {
+    width: 350px !important;
+    height: 2500px !important;
+  }
+}
 /*# sourceMappingURL=style.css.map */

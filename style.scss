@@ -950,3 +950,17 @@ a.developer{
         -webkit-text-fill-color: transparent;
     }
 }
+// GOOGLE FORM
+
+.googleForm{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    iframe{
+
+        @media only screen and(max-width:650px){
+            width:350px !important;
+            height: 2500px!important;
+        }
+    }
+}
