@@ -26,8 +26,6 @@ document.getElementById('webinarForm-time').addEventListener('submit', submitFor
 // ON FORM SUBMIT
 function submitForm(e) {
     e.preventDefault();
-    console.log("chala");
-
     // Get values
     var name = getInputVal('name');
     var regNo = getInputVal('regNo');
@@ -37,7 +35,6 @@ function submitForm(e) {
     var year = getInputVal('year');
     var doubt = getInputVal('Doubts');
 
-    console.log(name);
     // Save message
     saveMessage(name, regNo, email, phone, branch, year, doubt);
     // SHOW ALERT
@@ -47,7 +44,7 @@ function submitForm(e) {
     setTimeout(function(){
         document.querySelector('.alert').style.display = 'none';
         document.querySelector('#webinarForm-time').style.display = 'flex';
-    },3000);
+    },4000);
     document.getElementById('webinarForm-time').reset();
 }
 
@@ -60,19 +57,7 @@ function getInputVal(id) {
 
 function saveMessage(name, regNo, email, phone, branch, year, doubt){
 
-
-    // var newMessageRef = messagesRef.push();
-    // newMessageRef.set({
-    //     name: name,
-    //     RegistrationNumber: regNo,
-    //     Email: email,
-    //     Phone: phone,
-    //     Branch: branch,
-    //     Year: year,
-    //     Doubts: doubt
-    // });
-
-    messagesRef.collection("Messages").add({
+    messagesRef.collection("Time Management Webinar").add({
         name: name,
         RegistrationNumber: regNo,
         Email: email,
