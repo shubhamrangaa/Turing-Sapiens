@@ -12,7 +12,7 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  console.log("chala");
+ 
   firebase.analytics();
 
 //   REFERENCE MESSAGE COLLECTION
