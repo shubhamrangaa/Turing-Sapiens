@@ -278,3 +278,9 @@
     color: rgb(27, 153, 255) !important;
     border: 1.5px solid rgb(27, 153, 255);
   }
+
+  .alert{
+    display: none;
+    margin-bottom: 2rem;
+    color: rgba(42, 255, 70, 0.877);
+  }

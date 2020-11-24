@@ -409,7 +409,7 @@ p {
   }
 }
 
-#contact .container-main .form-container, #contact-mentor .container-main .form-container, #contact-partner .container-main .form-container, #contact-team .container-main .form-container {
+.form-container {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -417,18 +417,18 @@ p {
 }
 
 @media only screen and (max-width: 650px) {
-  #contact .container-main .form-container, #contact-mentor .container-main .form-container, #contact-partner .container-main .form-container, #contact-team .container-main .form-container {
+  .form-container {
     max-width: 300px;
     -ms-grid-column-align: center;
         justify-self: center;
   }
 }
 
-#contact .container-main .form-container h3, #contact-mentor .container-main .form-container h3, #contact-partner .container-main .form-container h3, #contact-team .container-main .form-container h3 {
+.form-container h3 {
   padding-bottom: 2rem;
 }
 
-#contact .container-main .form-container .form, #contact-mentor .container-main .form-container .form, #contact-partner .container-main .form-container .form, #contact-team .container-main .form-container .form {
+.form-container .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,7 +436,7 @@ p {
       flex-wrap: wrap;
 }
 
-#contact .container-main .form-container .form input, #contact-mentor .container-main .form-container .form input, #contact-partner .container-main .form-container .form input, #contact-team .container-main .form-container .form input {
+.form-container .form input {
   font-family: 'Inconsolata';
   font-size: 1.25rem;
   color: var(--text-grey);
@@ -451,23 +451,23 @@ p {
 }
 
 @media only screen and (max-width: 650px) {
-  #contact .container-main .form-container .form input, #contact-mentor .container-main .form-container .form input, #contact-partner .container-main .form-container .form input, #contact-team .container-main .form-container .form input {
+  .form-container .form input {
     margin-bottom: 3rem;
   }
 }
 
-#contact .container-main .form-container .form input.long, #contact-mentor .container-main .form-container .form input.long, #contact-partner .container-main .form-container .form input.long, #contact-team .container-main .form-container .form input.long {
+.form-container .form input.long {
   min-width: 616px;
 }
 
 @media only screen and (max-width: 650px) {
-  #contact .container-main .form-container .form input.long, #contact-mentor .container-main .form-container .form input.long, #contact-partner .container-main .form-container .form input.long, #contact-team .container-main .form-container .form input.long {
+  .form-container .form input.long {
     min-width: 300px;
     margin-bottom: 5rem;
   }
 }
 
-#contact .container-main .form-container .join-us, #contact-mentor .container-main .form-container .join-us, #contact-partner .container-main .form-container .join-us, #contact-team .container-main .form-container .join-us {
+.form-container .join-us {
   font-size: 1.25rem;
 }
 

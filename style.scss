@@ -323,54 +323,56 @@ p{
             }
         }
 
-       .form-container{
-            align-self: center;
-            max-width: 650px;
-            
-            @media only screen and (max-width: 650px){
-                max-width: 300px;
-                justify-self: center;
-            }
-            h3{
-                padding-bottom: 2rem;
-            }
-          .form{
-            display: flex;
-            flex-wrap: wrap;
-
-            input{
-                font-family: 'Inconsolata';
-                font-size: 1.25rem;
-                color: var(--text-grey);
-                background-color: var(--bg);
-                border: none;
-                border-bottom: 2px solid var(--text-dark);
-                min-width: 300px;
-                margin-right: 1rem;
-                margin-bottom: 5rem;
-                padding: .5rem 0rem;
-                outline: none;
-                @media only screen and (max-width: 650px){
-                    margin-bottom: 3rem;
-                }
-                
-                
-                &.long{
-                    min-width: 616px; 
-                    @media only screen and (max-width: 650px){
-                        min-width: 300px;
-                        margin-bottom: 5rem;
-                    }
-                }
-            }
-          }
-          .join-us{
-              font-size: 1.25rem;
-
-          }
-       }
+      
    }
 } 
+
+.form-container{
+    align-self: center;
+    max-width: 650px;
+    
+    @media only screen and (max-width: 650px){
+        max-width: 300px;
+        justify-self: center;
+    }
+    h3{
+        padding-bottom: 2rem;
+    }
+  .form{
+    display: flex;
+    flex-wrap: wrap;
+
+    input{
+        font-family: 'Inconsolata';
+        font-size: 1.25rem;
+        color: var(--text-grey);
+        background-color: var(--bg);
+        border: none;
+        border-bottom: 2px solid var(--text-dark);
+        min-width: 300px;
+        margin-right: 1rem;
+        margin-bottom: 5rem;
+        padding: .5rem 0rem;
+        outline: none;
+        @media only screen and (max-width: 650px){
+            margin-bottom: 3rem;
+        }
+        
+        
+        &.long{
+            min-width: 616px; 
+            @media only screen and (max-width: 650px){
+                min-width: 300px;
+                margin-bottom: 5rem;
+            }
+        }
+    }
+  }
+  .join-us{
+      font-size: 1.25rem;
+
+  }
+}
 // ABOUT US BEGINS
  .about-container{
      display: grid;
