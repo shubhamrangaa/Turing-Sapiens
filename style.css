@@ -1191,6 +1191,11 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+a.developer {
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+}
+
 a.developer:hover {
   opacity: 1;
   width: -webkit-fit-content;
@@ -1201,6 +1206,8 @@ a.developer:hover {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
 }
 
 .googleForm {
@@ -1223,5 +1230,107 @@ a.developer:hover {
 h3.teamText {
   font-family: inconsolata;
   font-weight: 400;
+}
+
+#Events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5rem auto;
+  max-width: 1200px;
+}
+
+#Events header {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+#Events header h2 {
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  #Events header {
+    margin: 2rem 2rem;
+  }
+}
+
+#Events .eventInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 350px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 0.25px var(--text-grey) solid;
+  border-radius: .65rem;
+  padding: 1rem;
+}
+
+#Events .eventInfo a {
+  font-family: 'Poppins';
+  -webkit-transition: .1s ease-in;
+  transition: .1s ease-in;
+  font-size: 1.4rem;
+}
+
+#Events .eventInfo a:hover {
+  color: rgba(60, 255, 60, 0.883);
+}
+
+#Events .eventInfo .date {
+  font-family: 'inconsolata';
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--text-grey);
+  padding-top: 1rem;
+}
+
+#Events .eventInfo figure {
+  margin: 0rem auto 1rem auto;
+}
+
+#Events .eventInfo figure img {
+  border-radius: .65rem;
+  height: 240px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  #Events .eventInfo figure img {
+    height: 240px;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #Events .eventInfo {
+    margin: 1rem 2rem;
+  }
+}
+
+#Events .event-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0rem 6rem;
 }
 /*# sourceMappingURL=style.css.map */
