@@ -289,3 +289,8 @@
     text-align: left;
     padding-bottom: 4rem;
   }
+
+  #landingform .form-container .form img{
+    height: 250px;
+    width: 250px;
+  }
