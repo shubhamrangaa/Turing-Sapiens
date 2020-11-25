@@ -28,6 +28,7 @@ function submitForm(e) {
     e.preventDefault();
     // Get values
     var name = getInputVal('name');
+    var college = getInputVal('college');
     var regNo = getInputVal('regNo');
     var email = getInputVal('email');
     var phone = getInputVal('phone');
@@ -36,7 +37,7 @@ function submitForm(e) {
     var doubt = getInputVal('Doubts');
 
     // Save message
-    saveMessage(name, regNo, email, phone, branch, year, doubt);
+    saveMessage(name, college, regNo, email, phone, branch, year, doubt);
     // SHOW ALERT
     document.querySelector('.alert').style.display = 'block';
     document.querySelector('#webinarForm-microsoft').style.display = 'none';
@@ -55,10 +56,11 @@ function getInputVal(id) {
 }
 // SAVE MESSAGE TO FIREBASE
 
-function saveMessage(name, regNo, email, phone, branch, year, doubt){
+function saveMessage(name, college, regNo, email, phone, branch, year, doubt){
 
     messagesRef.collection("Microsoft Webinar").add({
         name: name,
+        College: college,
         RegistrationNumber: regNo,
         Email: email,
         Phone: phone,
