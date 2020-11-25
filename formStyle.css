@@ -284,3 +284,8 @@
     margin-bottom: 2rem;
     color: rgba(42, 255, 70, 0.877);
   }
+
+  #landingform .form-container .form p{
+    text-align: left;
+    padding-bottom: 4rem;
+  }
