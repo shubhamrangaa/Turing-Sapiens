@@ -3,7 +3,7 @@
 window.addEventListener("load", () => setTimeout(function(){
   const loader = document.querySelector('.loader');
   loader.classList.add('loaded');
-},2500));
+},2000));
 
 // PRELOADER ENDS
 
