@@ -210,43 +210,43 @@ p {
 }
 
 .loader .evolution svg:nth-child(1) {
-  -webkit-animation: evolve 1.6s  ease-in-out;
-          animation: evolve 1.6s  ease-in-out;
+  -webkit-animation: evolve .8s  ease-in-out;
+          animation: evolve .8s  ease-in-out;
 }
 
 .loader .evolution svg:nth-child(2) {
-  -webkit-animation: evolve 1.4s  ease-in-out;
-          animation: evolve 1.4s  ease-in-out;
+  -webkit-animation: evolve .7s  ease-in-out;
+          animation: evolve .7s  ease-in-out;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+.loader .evolution svg:nth-child(3) {
+  -webkit-animation: evolve .6s  ease-in-out;
+          animation: evolve .6s  ease-in-out;
   -webkit-animation-delay: .2s;
           animation-delay: .2s;
 }
 
-.loader .evolution svg:nth-child(3) {
-  -webkit-animation: evolve 1.2s  ease-in-out;
-          animation: evolve 1.2s  ease-in-out;
+.loader .evolution svg:nth-child(4) {
+  -webkit-animation: evolve .5s  ease-in-out;
+          animation: evolve .5s  ease-in-out;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+.loader .evolution svg:nth-child(5) {
+  -webkit-animation: evolve .4s  ease-in-out;
+          animation: evolve .4s  ease-in-out;
   -webkit-animation-delay: .4s;
           animation-delay: .4s;
 }
 
-.loader .evolution svg:nth-child(4) {
-  -webkit-animation: evolve 1s  ease-in-out;
-          animation: evolve 1s  ease-in-out;
-  -webkit-animation-delay: .6s;
-          animation-delay: .6s;
-}
-
-.loader .evolution svg:nth-child(5) {
-  -webkit-animation: evolve .8s  ease-in-out;
-          animation: evolve .8s  ease-in-out;
-  -webkit-animation-delay: .8s;
-          animation-delay: .8s;
-}
-
 .loader .evolution svg:nth-child(6) {
-  -webkit-animation: evolve .6s  ease-in-out;
-          animation: evolve .6s  ease-in-out;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation: evolve .3s  ease-in-out;
+          animation: evolve .3s  ease-in-out;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
 }
 
 @media only screen and (max-width: 800px) {
@@ -295,8 +295,9 @@ p {
   visibility: hidden;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  -webkit-transition: all .35s ease-in;
-  transition: all .35s ease-in;
+  opacity: 0;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
 
 #navbar-menu {
