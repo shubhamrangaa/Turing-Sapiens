@@ -1055,3 +1055,19 @@ h3.teamText{
     margin: 2rem auto;
     max-width: 1250px;
 }
+
+// IG FEED
+.igfeed{
+    display: flex;
+    margin: 1rem auto;
+    max-width: 1300px;
+    flex-direction: column;
+
+    h2{
+        margin: 1rem auto;
+    }
+    .igposts{
+        display: flex;
+        justify-content: space-around;
+    }
+}

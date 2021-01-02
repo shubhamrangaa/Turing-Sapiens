@@ -1345,4 +1345,28 @@ h3.teamText {
   margin: 2rem auto;
   max-width: 1250px;
 }
+
+.igfeed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem auto;
+  max-width: 1300px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.igfeed h2 {
+  margin: 1rem auto;
+}
+
+.igfeed .igposts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
 /*# sourceMappingURL=style.css.map */
