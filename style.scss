@@ -996,7 +996,7 @@ h3.teamText{
 
     .eventInfo{
         display: flex;
-        max-width: 350px;
+        // max-width: 350px;
         flex-direction: column;
         justify-content: center;
         border: .25px var(--text-grey) solid;
@@ -1024,8 +1024,9 @@ h3.teamText{
             img{
                 border-radius: .65rem;
                 height: 240px;
-                width: 300px;
+                // width: 300px;
                 object-fit: cover;
+                // object-position: 0;
 
                 @media only screen and(max-width:600px){
                     height: 240px;
