@@ -1306,6 +1306,8 @@ h3.teamText {
   height: 240px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 0;
+     object-position: 0;
 }
 
 @media only screen and (max-width: 600px) {

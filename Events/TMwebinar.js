@@ -10,6 +10,7 @@
     appId: "1:1034929876031:web:c0511393bb0d998a169c8a",
     measurementId: "G-TTZBY7YC1X"
   };
+  
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
  
@@ -28,16 +29,16 @@ function submitForm(e) {
     e.preventDefault();
     // Get values
     var name = getInputVal('name');
-    var college = getInputVal('college');
     var regNo = getInputVal('regNo');
     var email = getInputVal('email');
     var phone = getInputVal('phone');
     var branch = getInputVal('branch');
-    var year = getInputVal('year');
     var doubt = getInputVal('Doubts');
+    var MemberId = getInputVal('MemberId');
+    var OrderId = getInputVal('order');
 
     // Save message
-    saveMessage(name, college, regNo, email, phone, branch, year, doubt);    // SHOW ALERT
+    saveMessage(name, regNo, email, phone, branch, doubt,MemberId, OrderId);    // SHOW ALERT
     document.querySelector('.alert').style.display = 'block';
     document.querySelector('#webinarForm-time').style.display = 'none';
 
@@ -55,22 +56,41 @@ function getInputVal(id) {
 }
 // SAVE MESSAGE TO FIREBASE
 
-function saveMessage(name, college, regNo, email, phone, branch, year, doubt){
+function saveMessage(name, regNo, email, phone, branch,  doubt, MemberId, OrderId){
 
-    messagesRef.collection("Time Management Webinar").add({
-        name: name,
-        College: college,
+    messagesRef.collection("Web Dev Week").add({
+        Name: name,
         RegistrationNumber: regNo,
         Email: email,
         Phone: phone,
         Branch: branch,
-        Year: year,
-        Doubts: doubt
+        Doubts: doubt,
+        MemberId: MemberId,
+        OrderId: OrderId
     })
         .then(function (docRef) {
-            console.log("Document written with ID: ", docRef.id);
+            console.log("Document written");
         })
         .catch(function (error) {
             console.error("Error adding document: ", error);
         });
+}
+
+// MEMBER FORM MULTI-LEVEL BUTTON
+
+const proceed = document.querySelector('.go-to-level');
+const authenticate = document.querySelector('.go-to-Member');
+const memberid = document.querySelector('.memberId');
+const level2 = document.querySelector('.level-2');
+console.log("FROM MEMBER FORM.JS")
+proceed.onclick = () => {
+  proceed.style.display = "none";
+  authenticate.style.display = "none";
+  level2.classList.add('visible');
+};
+
+authenticate.onclick = () => {
+  proceed.style.display = "none";
+  authenticate.style.display = "none";
+    memberid.classList.add('visible');
 }
