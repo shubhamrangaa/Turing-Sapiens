@@ -217,6 +217,7 @@
 /* LEVEL 2 VISIBILITY */
 .level-2{
   display: none;
+  flex-direction: column;
   width: 100%;
   margin-top: 2rem;
   transition: .5s ease-in;
@@ -228,12 +229,7 @@
   transition: .5s ease-in;
 }
 
-.go-to-level, .go-to-Member{
-  cursor: pointer;
-  display: block;
-  margin: 1rem;
 
-}
 
 @media only screen and (max-width: 700px){
   .go-to-level, .go-to-Member{
@@ -277,6 +273,19 @@
   height: 400px;
 }
 
+.level-2 div a{
+  margin: 1rem;
+  padding: .5rem 1rem;
+  border: 1px solid white;
+  border-radius: .3rem;
+}
+
+@media only screen and (max-width: 700px){
+  .level-2 div a{
+margin: .2rem;
+  }
+}
+
 .level-2 button:hover{
   transition: .65s ease ;
   cursor: pointer;
@@ -285,7 +294,7 @@
 }
 
   .visible{
-    display: block ;
+    display: flex ;
     flex-direction: column;
   }
 

@@ -79,18 +79,17 @@ function saveMessage(name, regNo, email, phone, branch,  doubt, MemberId, OrderI
 // MEMBER FORM MULTI-LEVEL BUTTON
 
 const proceed = document.querySelector('.go-to-level');
-const authenticate = document.querySelector('.go-to-Member');
-const memberid = document.querySelector('.memberId');
+// const authenticate = document.querySelector('.go-to-Member');
+// const memberid = document.querySelector('.memberId');
 const level2 = document.querySelector('.level-2');
 console.log("FROM MEMBER FORM.JS")
 proceed.onclick = () => {
   proceed.style.display = "none";
-  authenticate.style.display = "none";
   level2.classList.add('visible');
 };
 
-authenticate.onclick = () => {
-  proceed.style.display = "none";
-  authenticate.style.display = "none";
-    memberid.classList.add('visible');
-}
+// authenticate.onclick = () => {
+//   proceed.style.display = "none";
+//   authenticate.style.display = "none";
+//     memberid.classList.add('visible');
+// }
