@@ -34,11 +34,11 @@ function submitForm(e) {
     var phone = getInputVal('phone');
     var branch = getInputVal('branch');
     var doubt = getInputVal('Doubts');
-    var MemberId = getInputVal('MemberId');
-    var OrderId = getInputVal('order');
+    // var MemberId = getInputVal('MemberId');
+    // var OrderId = getInputVal('order');
 
     // Save message
-    saveMessage(name, regNo, email, phone, branch, doubt,MemberId, OrderId);    // SHOW ALERT
+    saveMessage(name, regNo, email, phone, branch, doubt);    // SHOW ALERT
     document.querySelector('.alert').style.display = 'block';
     document.querySelector('#webinarForm-time').style.display = 'none';
 
@@ -56,7 +56,7 @@ function getInputVal(id) {
 }
 // SAVE MESSAGE TO FIREBASE
 
-function saveMessage(name, regNo, email, phone, branch,  doubt, MemberId, OrderId){
+function saveMessage(name, regNo, email, phone, branch,  doubt){
 
     messagesRef.collection("Web Dev Week").add({
         Name: name,
@@ -65,8 +65,8 @@ function saveMessage(name, regNo, email, phone, branch,  doubt, MemberId, OrderI
         Phone: phone,
         Branch: branch,
         Doubts: doubt,
-        MemberId: MemberId,
-        OrderId: OrderId
+        // MemberId: MemberId,
+        // OrderId: OrderId
     })
         .then(function (docRef) {
             console.log("Document written");
