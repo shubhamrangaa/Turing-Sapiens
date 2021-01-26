@@ -58,7 +58,7 @@ function getInputVal(id) {
 
 function saveMessage(name, college, regNo, email, phone, branch, year, doubt){
 
-    messagesRef.collection("Microsoft Webinar").add({
+    messagesRef.collection("Profile Building Workshop").add({
         name: name,
         College: college,
         RegistrationNumber: regNo,
