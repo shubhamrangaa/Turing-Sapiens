@@ -21,7 +21,7 @@
 let messagesRef = firebase.firestore();
 
 //   LISTEN TO FORM SUBMIT
-document.getElementById('webinarForm-microsoft').addEventListener('submit', submitForm);
+document.getElementById('webinarForm').addEventListener('submit', submitForm);
 
 // ON FORM SUBMIT
 function submitForm(e) {
