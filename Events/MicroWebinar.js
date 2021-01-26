@@ -40,13 +40,13 @@ function submitForm(e) {
     saveMessage(name, college, regNo, email, phone, branch, year, doubt);
     // SHOW ALERT
     document.querySelector('.alert').style.display = 'block';
-    document.querySelector('#webinarForm-microsoft').style.display = 'none';
+    document.querySelector('#webinarForm').style.display = 'none';
 
     setTimeout(function(){
         document.querySelector('.alert').style.display = 'none';
-        document.querySelector('#webinarForm-microsoft').style.display = 'flex';
+        document.querySelector('#webinarForm').style.display = 'flex';
     },4000);
-    document.getElementById('webinarForm-microsoft').reset();
+    document.getElementById('webinarForm').reset();
 }
 
 
