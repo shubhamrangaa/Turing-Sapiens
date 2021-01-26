@@ -46,7 +46,7 @@ function submitForm(e) {
         document.querySelector('.alert').style.display = 'none';
         document.querySelector('#webinarForm').style.display = 'flex';
     },4000);
-    window.location.replace("../index.html");
+    
 }
 
 
@@ -70,6 +70,7 @@ function saveMessage(name, college, regNo, email, phone, branch, year, doubt){
     })
         .then(function (docRef) {
             console.log("Document written with ID: ", docRef.id);
+            window.location.replace("../index.html");
         })
         .catch(function (error) {
             console.error("Error adding document: ", error);
