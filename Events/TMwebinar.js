@@ -58,7 +58,7 @@ function getInputVal(id) {
 
 function saveMessage(name, regNo, email, phone, branch,  doubt){
 
-    messagesRef.collection("Web Dev Week").add({
+    messagesRef.collection("Profile Building Workshop").add({
         Name: name,
         RegistrationNumber: regNo,
         Email: email,
