@@ -46,7 +46,7 @@ function submitForm(e) {
         document.querySelector('.alert').style.display = 'none';
         document.querySelector('#webinarForm').style.display = 'flex';
     },4000);
-    document.getElementById('webinarForm').reset();
+    window.location.replace("./index.html");
 }
 
 
